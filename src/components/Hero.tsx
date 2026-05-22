@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
 
   // Вибір фото в залежності від пристрою
   const backgroundImage = isMobile
-    ? 'url("/tilo-mobile.jpg")'
+    ? 'url("/tilo-mobile.JPG")'
     : 'url("/tilo.png")';
 
   return (
