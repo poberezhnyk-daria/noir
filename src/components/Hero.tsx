@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const Hero: React.FC = () => {
-  // Перевірка, чи це мобільний пристрій
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -15,46 +14,57 @@ const Hero: React.FC = () => {
       height: '100vh',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: isMobile ? 'center' : 'flex-end',
+      justifyContent: 'flex-end', // Опускаємо контент (кнопку) до низу
+      alignItems: 'center', // Кнопка тепер завжди по центру для балансу
       textAlign: 'center',
       position: 'relative',
       backgroundImage: 'url("/tilo.png")',
       backgroundSize: 'cover',
-      backgroundPosition: isMobile ? 'center center' : 'center 15%',
+      backgroundPosition: 'center center', // Фото ідеально по центру
       backgroundRepeat: 'no-repeat',
       color: 'white',
-      paddingRight: isMobile ? '0' : '10%',
+      paddingBottom: isMobile ? '12vh' : '10vh', // Відступ від самого низу екрана
       transition: 'all 0.3s ease'
     }}>
+      {/* Тонкий шар затемнення */}
       <div style={{
         position: 'absolute',
         top: 0,
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.45)',
+        backgroundColor: 'rgba(0, 0, 0, 0.25)',
         zIndex: 1
       }}></div>
 
       <div style={{ position: 'relative', zIndex: 2, width: isMobile ? '80%' : 'auto' }}>
-        <a href="#booking" style={{
-          display: 'inline-block',
-          padding: isMobile ? '14px 25px' : '20px 50px',
-          fontSize: isMobile ? '0.8rem' : '1.1rem',
-          letterSpacing: '2px',
-          fontWeight: 'bold',
-          transition: 'all 0.4s ease',
-          backgroundColor: 'transparent',
-          color: '#D4AF37',
-          textTransform: 'uppercase',
-          backdropFilter: 'blur(8px)',
-          border: '1.5px solid #D4AF37',
-          textDecoration: 'none',
-          boxShadow: '0 0 20px rgba(0,0,0,0.3)',
-          width: isMobile ? '100%' : 'auto',
-          maxWidth: isMobile ? '250px' : 'none'
-        }}>
+        <a
+          href="#booking"
+          style={{
+            display: 'inline-block',
+            padding: isMobile ? '14px 30px' : '18px 50px',
+            fontSize: isMobile ? '0.85rem' : '1rem',
+            letterSpacing: '3px',
+            fontWeight: 'bold',
+            transition: 'all 0.4s ease',
+            backgroundColor: 'transparent',
+            color: '#D4AF37',
+            textTransform: 'uppercase',
+            backdropFilter: 'blur(10px)',
+            border: '2px solid #D4AF37',
+            textDecoration: 'none',
+            boxShadow: '0 10px 40px rgba(0,0,0,0.4)',
+            maxWidth: isMobile ? '260px' : 'none'
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = '#D4AF37';
+            e.currentTarget.style.color = 'black';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = 'transparent';
+            e.currentTarget.style.color = '#D4AF37';
+          }}
+        >
           ЗАБРОНЮВАТИ СТІЛ
         </a>
       </div>
