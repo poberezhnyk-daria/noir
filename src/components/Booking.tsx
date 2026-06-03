@@ -3,7 +3,7 @@ import React from 'react';
 const Booking: React.FC = () => {
   // Ваша актуальна Google Форма
   const googleFormUrl =
-    'https://docs.google.com/forms/d/e/1FAIpQLSdO7iW9V-F-76YyD8w_H_D9YyR0H-xO0KlFQcke5RucjRA/viewform?embedded=true';
+    'https://docs.google.com/forms/d/e/1FAIpQLSeiDoJ5rDpmYvftLwQkiA4N1Qz9P0QhybX0KlFQcke5RucjRA/viewform?usp=dialog';
 
   return (
     <section
