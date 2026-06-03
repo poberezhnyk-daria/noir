@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
         position: 'relative',
         backgroundImage: backgroundImage, // Автоматичне перемикання
         backgroundSize: 'cover',
-        backgroundPosition: 'center center',
+        backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
         overflow: 'hidden',
         backgroundColor: '#0A0A0A'
