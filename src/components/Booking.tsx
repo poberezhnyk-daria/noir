@@ -1,85 +1,161 @@
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState } from 'react';
 
 const Booking: React.FC = () => {
-  const form = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    date: '',
+    time: '',
+    guests: '2',
+  });
 
-  const sendEmail = (e: React.FormEvent) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleTelegramOrder = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('sending');
 
-    const SERVICE_ID = 'service_bjw968j';
-    const TEMPLATE_ID = 'template_saprc4f';
-    const PUBLIC_KEY = 'dj_AphSF-R2wNxTAE';
+    const message =
+      `🌟 *Нове бронювання Noir Lounge*%0A%0A` +
+      `👤 Ім'я: ${formData.name}%0A` +
+      `📞 Телефон: ${formData.phone}%0A` +
+      `📅 Дата: ${formData.date}%0A` +
+      `⏰ Час: ${formData.time}%0A` +
+      `👥 Гостей: ${formData.guests}`;
 
-    // Ініціалізація EmailJS
-    emailjs.init(PUBLIC_KEY);
+    const telegramUrl =
+      `https://t.me/share/url?url=Бронювання&text=${message}`;
 
-    if (form.current) {
-      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current)
-        .then(() => {
-          setStatus('success');
-          form.current?.reset();
-          setTimeout(() => setStatus('idle'), 5000);
-        }, (error: any) => {
-          console.error('EmailJS Error:', error);
-          setStatus('error');
-          setTimeout(() => setStatus('idle'), 5000);
-        });
-    }
+    window.open(telegramUrl, '_blank');
   };
 
   return (
-    <section id="booking" style={{ padding: '100px 0', backgroundColor: 'var(--bg-secondary)' }}>
-      <div className="container" style={{ maxWidth: '600px' }}>
-        <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '40px' }}>
+    <section
+      id="booking"
+      style={{
+        padding: '100px 0',
+        backgroundColor: 'var(--bg-secondary)',
+      }}
+    >
+      <div
+        className="container"
+        style={{
+          maxWidth: '600px',
+        }}
+      >
+        <h2
+          style={{
+            textAlign: 'center',
+            fontSize: '2.5rem',
+            marginBottom: '40px',
+          }}
+        >
           Бронювання <span className="gold-text">Столу</span>
         </h2>
-        
-        <form ref={form} onSubmit={sendEmail} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <input type="text" name="user_name" placeholder="Ваше ім'я" required style={inputStyle} />
-          <input type="tel" name="user_phone" placeholder="Номер телефону" required style={inputStyle} />
-          
-          <div style={{ display: 'flex', gap: '20px' }}>
-            <input type="date" name="booking_date" required style={{ ...inputStyle, flex: 1 }} />
-            <input type="time" name="booking_time" required style={{ ...inputStyle, flex: 1 }} />
+
+        <p
+          style={{
+            textAlign: 'center',
+            color: 'var(--text-muted)',
+            marginBottom: '30px',
+          }}
+        >
+          Заповніть дані, і ми перенаправимо вас у Telegram для швидкого
+          підтвердження.
+        </p>
+
+        <form
+          onSubmit={handleTelegramOrder}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '20px',
+          }}
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Ваше ім'я"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            style={inputStyle}
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Номер телефону"
+            required
+            value={formData.phone}
+            onChange={handleChange}
+            style={inputStyle}
+          />
+
+          <div
+            style={{
+              display: 'flex',
+              gap: '20px',
+            }}
+          >
+            <input
+              type="date"
+              name="date"
+              required
+              value={formData.date}
+              onChange={handleChange}
+              style={{
+                ...inputStyle,
+                flex: 1,
+              }}
+            />
+
+            <input
+              type="time"
+              name="time"
+              required
+              value={formData.time}
+              onChange={handleChange}
+              style={{
+                ...inputStyle,
+                flex: 1,
+              }}
+            />
           </div>
-          
-          <select name="guests_count" style={inputStyle}>
+
+          <select
+            name="guests"
+            value={formData.guests}
+            onChange={handleChange}
+            style={inputStyle}
+          >
             <option value="2">2 особи</option>
             <option value="4">4 особи</option>
             <option value="6">6 осіб</option>
             <option value="more">Більше</option>
           </select>
 
-          <button 
-            type="submit" 
-            disabled={status === 'sending'}
-            className="gold-border" 
+          <button
+            type="submit"
+            className="gold-border"
             style={{
               padding: '15px',
-              color: status === 'sending' ? 'gray' : 'var(--accent-gold)',
+              color: 'var(--accent-gold)',
               fontSize: '1.1rem',
               letterSpacing: '2px',
               marginTop: '10px',
-              cursor: status === 'sending' ? 'not-allowed' : 'pointer',
-              transition: '0.3s'
+              cursor: 'pointer',
+              transition: '0.3s',
             }}
           >
-            {status === 'sending' ? 'ВІДПРАВКА...' : 'ПІДТВЕРДИТИ БРОНЮВАННЯ'}
+            ВІДКРИТИ TELEGRAM ДЛЯ ПІДТВЕРДЖЕННЯ
           </button>
-
-          {status === 'success' && (
-            <p style={{ color: '#D4AF37', textAlign: 'center', marginTop: '15px', fontWeight: 'bold' }}>
-              Дякуємо! Бронювання надіслано. Ми зателефонуємо вам для підтвердження.
-            </p>
-          )}
-          {status === 'error' && (
-            <p style={{ color: '#FF4D4D', textAlign: 'center', marginTop: '15px' }}>
-              Сталася помилка. Будь ласка, спробуйте ще раз або зателефонуйте нам.
-            </p>
-          )}
         </form>
       </div>
     </section>
@@ -93,7 +169,7 @@ const inputStyle: React.CSSProperties = {
   color: 'white',
   fontSize: '1rem',
   outline: 'none',
-  borderRadius: '4px'
+  borderRadius: '4px',
 };
 
 export default Booking;
