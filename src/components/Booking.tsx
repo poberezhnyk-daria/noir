@@ -25,7 +25,7 @@ const Booking: React.FC = () => {
     const barPhoneNumber = '380937234662';
 
     // Текст для копіювання
-    const textToCopy = `Привіт! Хочу забронювати стіл:
+    const textToCopy = `Вітаю! Хочу забронювати стіл:
 👤 Ім'я: ${formData.name}
 📞 Тел: ${formData.phone}
 📅 Дата: ${formData.date}
