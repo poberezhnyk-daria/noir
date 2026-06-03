@@ -1,19 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header
       style={{
-        padding: '15px 0',
-        borderBottom: '1px solid rgba(212, 175, 55, 0.2)',
+        padding: scrolled ? '10px 0' : '20px 0',
         position: 'fixed',
         width: '100%',
         top: 0,
-        backgroundColor: 'rgba(10, 10, 10, 0.98)',
+        backgroundColor: scrolled
+          ? 'rgba(10, 10, 10, 0.95)'
+          : 'transparent',
+        backdropFilter: scrolled ? 'blur(10px)' : 'none',
+        borderBottom: scrolled
+          ? '1px solid rgba(212, 175, 55, 0.2)'
+          : '1px solid transparent',
+        transition: 'all 0.4s ease-in-out',
         zIndex: 1000,
       }}
     >
@@ -23,7 +40,7 @@ const Header: React.FC = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          position: 'relative',
+          padding: '0 30px',
         }}
       >
         {/* Логотип зліва */}
@@ -32,53 +49,75 @@ const Header: React.FC = () => {
           style={{
             display: 'flex',
             alignItems: 'center',
-            flex: 1,
           }}
         >
           <img
             src="/logo.jpg"
             alt="NOIR"
             style={{
-              height: '35px',
-              width: 'auto',
-              borderRadius: '4px',
+              height: scrolled ? '45px' : '65px',
+              width: scrolled ? '45px' : '65px',
+              borderRadius: '50%',
+              objectFit: 'cover',
+              border: '1px solid rgba(212, 175, 55, 0.5)',
+              transition: 'all 0.4s ease',
             }}
           />
-        </div>
 
-        {/* Назва посередині (тільки для мобілок) */}
-        <div
-          className="mobile-title"
-          style={{
-            position: 'absolute',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            fontSize: '1.4rem',
-            fontWeight: 'bold',
-            letterSpacing: '3px',
-            color: '#D4AF37',
-            display: 'none',
-          }}
-        >
-          NOIR
+          <span
+            style={{
+              marginLeft: '15px',
+              fontSize: '1.2rem',
+              letterSpacing: '4px',
+              color: '#D4AF37',
+              fontWeight: '300',
+              display: scrolled ? 'none' : 'block',
+            }}
+          >
+            NOIR
+          </span>
         </div>
 
         {/* Десктопне меню */}
         <nav className="desktop-nav">
-          <ul style={{ display: 'flex', gap: '30px' }}>
+          <ul
+            style={{
+              display: 'flex',
+              gap: '40px',
+              listStyle: 'none',
+              margin: 0,
+              padding: 0,
+            }}
+          >
             <li>
               <a href="#hero" style={navLinkStyle}>
-                Головна
+                ГОЛОВНА
               </a>
             </li>
+
             <li>
               <a href="#menu" style={navLinkStyle}>
-                Меню
+                МЕНЮ
               </a>
             </li>
+
             <li>
               <a href="#booking" style={navLinkStyle}>
-                Бронювання
+                БРОНЮВАННЯ
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.instagram.com/noir.loungebar?igsh=MmZjcHB4OGNtZXoy"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  ...navLinkStyle,
+                  color: '#D4AF37',
+                }}
+              >
+                INSTAGRAM
               </a>
             </li>
           </ul>
@@ -91,15 +130,16 @@ const Header: React.FC = () => {
           style={{
             display: 'none',
             flexDirection: 'column',
-            gap: '6px',
-            zIndex: 1100,
-            flex: 1,
-            alignItems: 'flex-end',
+            gap: '7px',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            padding: '5px',
           }}
         >
-          <span style={{ ...lineStyle, width: '30px' }}></span>
-          <span style={{ ...lineStyle, width: '20px' }}></span>
-          <span style={{ ...lineStyle, width: '30px' }}></span>
+          <span style={{ ...lineStyle, width: '30px' }} />
+          <span style={{ ...lineStyle, width: '20px' }} />
+          <span style={{ ...lineStyle, width: '30px' }} />
         </button>
 
         {/* Мобільне меню */}
@@ -116,7 +156,7 @@ const Header: React.FC = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            transition: '0.4s ease-in-out',
+            transition: '0.5s cubic-bezier(0.77, 0, 0.175, 1)',
             zIndex: 1050,
           }}
         >
@@ -124,8 +164,9 @@ const Header: React.FC = () => {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '40px',
+              gap: '35px',
               textAlign: 'center',
+              listStyle: 'none',
             }}
           >
             <li>
@@ -134,7 +175,7 @@ const Header: React.FC = () => {
                 onClick={toggleMenu}
                 style={mobileNavLinkStyle}
               >
-                Головна
+                ГОЛОВНА
               </a>
             </li>
 
@@ -144,7 +185,7 @@ const Header: React.FC = () => {
                 onClick={toggleMenu}
                 style={mobileNavLinkStyle}
               >
-                Меню
+                МЕНЮ
               </a>
             </li>
 
@@ -154,7 +195,7 @@ const Header: React.FC = () => {
                 onClick={toggleMenu}
                 style={mobileNavLinkStyle}
               >
-                Бронювання
+                БРОНЮВАННЯ
               </a>
             </li>
 
@@ -168,7 +209,7 @@ const Header: React.FC = () => {
                   color: '#D4AF37',
                 }}
               >
-                Instagram
+                INSTAGRAM
               </a>
             </li>
           </ul>
@@ -176,10 +217,14 @@ const Header: React.FC = () => {
           <button
             onClick={toggleMenu}
             style={{
-              marginTop: '50px',
-              color: '#D4AF37',
-              fontSize: '1rem',
-              letterSpacing: '2px',
+              marginTop: '60px',
+              color: 'white',
+              background: 'none',
+              border: '1px solid rgba(255,255,255,0.2)',
+              padding: '10px 30px',
+              fontSize: '0.8rem',
+              letterSpacing: '3px',
+              cursor: 'pointer',
             }}
           >
             ЗАКРИТИ
@@ -191,20 +236,26 @@ const Header: React.FC = () => {
 };
 
 const navLinkStyle: React.CSSProperties = {
-  fontSize: '0.9rem',
-  letterSpacing: '1px',
-  transition: '0.3s',
+  fontSize: '0.8rem',
+  letterSpacing: '3px',
+  color: 'white',
+  textDecoration: 'none',
+  fontWeight: '400',
+  transition: '0.3s ease',
+  position: 'relative',
 };
 
 const mobileNavLinkStyle: React.CSSProperties = {
-  fontSize: '2rem',
-  letterSpacing: '4px',
+  fontSize: '1.8rem',
+  letterSpacing: '5px',
   color: 'white',
+  textDecoration: 'none',
   fontWeight: '300',
+  transition: '0.3s',
 };
 
 const lineStyle: React.CSSProperties = {
-  height: '2px',
+  height: '1px',
   backgroundColor: '#D4AF37',
   display: 'block',
   transition: '0.3s',
