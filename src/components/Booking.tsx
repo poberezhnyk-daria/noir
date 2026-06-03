@@ -21,28 +21,19 @@ const Booking: React.FC = () => {
   const handleTelegramOrder = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const myPhoneNumber = '380684694673';
+    const message =
+      `🌟 *Нове бронювання Noir Lounge*\n\n` +
+      `👤 Ім'я: ${formData.name}\n` +
+      `📞 Тел: ${formData.phone}\n` +
+      `📅 Дата: ${formData.date}\n` +
+      `⏰ Час: ${formData.time}\n` +
+      `👥 Гостей: ${formData.guests}`;
 
-    const textToCopy = `Привіт! Хочу забронювати стіл:
-👤 Ім'я: ${formData.name}
-📞 Тел: ${formData.phone}
-📅 Дата: ${formData.date}
-⏰ Час: ${formData.time}
-👥 Гостей: ${formData.guests}`;
+    const telegramUrl = `https://t.me/share/url?url=&text=${encodeURIComponent(
+      message
+    )}`;
 
-    const telegramUrl = `https://t.me/+${myPhoneNumber}`;
-
-    navigator.clipboard
-      .writeText(textToCopy)
-      .then(() => {
-        alert(
-          'Дані бронювання скопійовано! Просто вставте їх у чат Telegram.'
-        );
-        window.open(telegramUrl, '_blank');
-      })
-      .catch(() => {
-        window.open(telegramUrl, '_blank');
-      });
+    window.open(telegramUrl, '_blank');
   };
 
   return (
@@ -76,8 +67,8 @@ const Booking: React.FC = () => {
             marginBottom: '30px',
           }}
         >
-          Заповніть дані, і ми перенаправимо вас у Telegram для швидкого
-          підтвердження.
+          Заповніть дані та оберіть контакт (093 723 46 62) для миттєвої
+          відправки.
         </p>
 
         <form
@@ -164,7 +155,7 @@ const Booking: React.FC = () => {
               transition: '0.3s',
             }}
           >
-            ВІДКРИТИ TELEGRAM ДЛЯ ПІДТВЕРДЖЕННЯ
+            ВІДПРАВИТИ БРОНЮВАННЯ В TELEGRAM
           </button>
         </form>
       </div>
