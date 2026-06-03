@@ -1,66 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Booking: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    date: '',
-    time: '',
-    guests: '2',
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleTelegramOrder = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Номер для отримання заявок
-    const barPhoneNumber = '380937234662';
-
-    // Текст для копіювання
-    const textToCopy = `Вітаю! Хочу забронювати стіл:
-👤 Ім'я: ${formData.name}
-📞 Тел: ${formData.phone}
-📅 Дата: ${formData.date}
-⏰ Час: ${formData.time}
-👥 Гостей: ${formData.guests}`;
-
-    // Пряме посилання на чат Telegram
-    const telegramUrl = `https://t.me/+${barPhoneNumber}`;
-
-    // Копіюємо текст у буфер обміну
-    navigator.clipboard
-      .writeText(textToCopy)
-      .then(() => {
-        alert(
-          'Дані бронювання скопійовано! Просто вставте їх у чат Telegram.'
-        );
-        window.open(telegramUrl, '_blank');
-      })
-      .catch(() => {
-        window.open(telegramUrl, '_blank');
-      });
-  };
+  // Ваша актуальна Google Форма
+  const googleFormUrl =
+    'https://docs.google.com/forms/d/e/1FAIpQLSdO7iW9V-F-76YyD8w_H_D9YyR0H-xO0KlFQcke5RucjRA/viewform?embedded=true';
 
   return (
     <section
       id="booking"
       style={{
-        padding: '100px 0',
+        padding: '80px 0',
         backgroundColor: 'var(--bg-secondary)',
       }}
     >
       <div
         className="container"
         style={{
-          maxWidth: '600px',
+          maxWidth: '800px',
         }}
       >
         <h2
@@ -73,117 +29,57 @@ const Booking: React.FC = () => {
           Бронювання <span className="gold-text">Столу</span>
         </h2>
 
-        <p
+        <div
+          style={{
+            width: '100%',
+            height: '750px',
+            borderRadius: '12px',
+            overflow: 'hidden',
+            border: '1px solid rgba(212, 175, 55, 0.2)',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+            backgroundColor: 'white',
+          }}
+        >
+          <iframe
+            src={googleFormUrl}
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            marginHeight={0}
+            marginWidth={0}
+          >
+            Завантаження...
+          </iframe>
+        </div>
+
+        <div
           style={{
             textAlign: 'center',
-            color: 'var(--text-muted)',
-            marginBottom: '30px',
+            marginTop: '30px',
           }}
         >
-          Заповніть дані, і ми перенаправимо вас у Telegram для швидкого
-          підтвердження.
-        </p>
-
-        <form
-          onSubmit={handleTelegramOrder}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '20px',
-          }}
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Ваше ім'я"
-            required
-            value={formData.name}
-            onChange={handleChange}
-            style={inputStyle}
-          />
-
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Номер телефону"
-            required
-            value={formData.phone}
-            onChange={handleChange}
-            style={inputStyle}
-          />
-
-          <div
+          <p
             style={{
-              display: 'flex',
-              gap: '20px',
+              color: 'var(--text-muted)',
             }}
           >
-            <input
-              type="date"
-              name="date"
-              required
-              value={formData.date}
-              onChange={handleChange}
+            Також ви можете забронювати за телефоном:
+            <br />
+            <a
+              href="tel:+380963635324"
+              className="gold-text"
               style={{
-                ...inputStyle,
-                flex: 1,
+                fontWeight: 'bold',
+                fontSize: '1.2rem',
               }}
-            />
-
-            <input
-              type="time"
-              name="time"
-              required
-              value={formData.time}
-              onChange={handleChange}
-              style={{
-                ...inputStyle,
-                flex: 1,
-              }}
-            />
-          </div>
-
-          <select
-            name="guests"
-            value={formData.guests}
-            onChange={handleChange}
-            style={inputStyle}
-          >
-            <option value="2">2 особи</option>
-            <option value="4">4 особи</option>
-            <option value="6">6 осіб</option>
-            <option value="more">Більше</option>
-          </select>
-
-          <button
-            type="submit"
-            className="gold-border"
-            style={{
-              padding: '15px',
-              color: 'var(--accent-gold)',
-              fontSize: '1.1rem',
-              letterSpacing: '2px',
-              marginTop: '10px',
-              cursor: 'pointer',
-              transition: '0.3s',
-            }}
-          >
-            ВІДКРИТИ TELEGRAM ДЛЯ ПІДТВЕРДЖЕННЯ
-          </button>
-        </form>
+            >
+              +380 96 363 5324
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );
-};
-
-const inputStyle: React.CSSProperties = {
-  padding: '12px',
-  backgroundColor: 'rgba(255, 255, 255, 0.05)',
-  border: '1px solid rgba(212, 175, 55, 0.3)',
-  color: 'white',
-  fontSize: '1rem',
-  outline: 'none',
-  borderRadius: '4px',
 };
 
 export default Booking;
