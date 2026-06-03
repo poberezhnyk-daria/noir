@@ -26,7 +26,19 @@ const Header: React.FC = () => {
         transition: 'all 0.4s ease-in-out',
       }}
     >
-      {/* Основна навігація (тільки меню посередині) */}
+      {/* CSS для мобільної версії */}
+      <style>{`
+        @media (max-width: 768px) {
+          .desktop-nav { display: none !important; }
+          .hamburger { display: flex !important; }
+        }
+
+        @media (min-width: 769px) {
+          .desktop-nav { display: flex !important; }
+          .hamburger { display: none !important; }
+        }
+      `}</style>
+
       <div
         style={{
           padding: scrolled ? '15px 30px' : '30px 30px',
@@ -42,9 +54,10 @@ const Header: React.FC = () => {
           justifyContent: 'center',
           transition: 'all 0.4s ease',
           position: 'relative',
+          minHeight: '60px',
         }}
       >
-        {/* Десктопне меню */}
+        {/* Меню для ПК */}
         <nav className="desktop-nav">
           <ul
             style={{
@@ -75,28 +88,54 @@ const Header: React.FC = () => {
           </ul>
         </nav>
 
-        {/* Гамбургер для мобілок */}
+        {/* Кнопка-Гамбургер для телефону */}
         <button
           className="hamburger"
           onClick={toggleMenu}
           style={{
             display: 'none',
             position: 'absolute',
-            right: '30px',
+            right: '20px',
             flexDirection: 'column',
-            gap: '7px',
+            gap: '6px',
             background: 'none',
             border: 'none',
             cursor: 'pointer',
+            padding: '10px',
+            zIndex: 1100,
           }}
         >
-          <span style={{ ...lineStyle, width: '30px' }}></span>
-          <span style={{ ...lineStyle, width: '20px' }}></span>
+          <span
+            style={{
+              ...lineStyle,
+              width: '25px',
+              transform: isMenuOpen
+                ? 'rotate(45deg) translate(5px, 5px)'
+                : 'none',
+            }}
+          />
+
+          <span
+            style={{
+              ...lineStyle,
+              width: '25px',
+              opacity: isMenuOpen ? 0 : 1,
+            }}
+          />
+
+          <span
+            style={{
+              ...lineStyle,
+              width: '25px',
+              transform: isMenuOpen
+                ? 'rotate(-45deg) translate(4px, -5px)'
+                : 'none',
+            }}
+          />
         </button>
 
-        {/* Мобільне меню */}
+        {/* Мобільне меню (виїжджає) */}
         <div
-          className={`mobile-overlay ${isMenuOpen ? 'open' : ''}`}
           style={{
             position: 'fixed',
             top: 0,
@@ -110,15 +149,17 @@ const Header: React.FC = () => {
             alignItems: 'center',
             transition: '0.5s cubic-bezier(0.77, 0, 0.175, 1)',
             zIndex: 1050,
+            visibility: isMenuOpen ? 'visible' : 'hidden',
           }}
         >
           <ul
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '35px',
+              gap: '40px',
               textAlign: 'center',
               listStyle: 'none',
+              padding: 0,
             }}
           >
             <li>
@@ -150,23 +191,22 @@ const Header: React.FC = () => {
                 БРОНЮВАННЯ
               </a>
             </li>
-          </ul>
 
-          <button
-            onClick={toggleMenu}
-            style={{
-              marginTop: '60px',
-              color: 'white',
-              background: 'none',
-              border: '1px solid rgba(255,255,255,0.2)',
-              padding: '10px 30px',
-              fontSize: '0.8rem',
-              letterSpacing: '3px',
-              cursor: 'pointer',
-            }}
-          >
-            ЗАКРИТИ
-          </button>
+            <li>
+              <a
+                href="https://www.instagram.com/noir.loungebar?igsh=MmZjcHB4OGNtZXoy"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  ...mobileNavLinkStyle,
+                  color: '#D4AF37',
+                  fontSize: '1.4rem',
+                }}
+              >
+                INSTAGRAM
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -174,8 +214,8 @@ const Header: React.FC = () => {
 };
 
 const navLinkStyle: React.CSSProperties = {
-  fontSize: '0.9rem',
-  letterSpacing: '5px',
+  fontSize: '0.85rem',
+  letterSpacing: '4px',
   color: 'white',
   textDecoration: 'none',
   fontWeight: '400',
@@ -183,17 +223,19 @@ const navLinkStyle: React.CSSProperties = {
 };
 
 const mobileNavLinkStyle: React.CSSProperties = {
-  fontSize: '1.8rem',
-  letterSpacing: '5px',
+  fontSize: '2rem',
+  letterSpacing: '6px',
   color: 'white',
   textDecoration: 'none',
   fontWeight: '300',
+  transition: '0.3s',
 };
 
 const lineStyle: React.CSSProperties = {
-  height: '1px',
+  height: '2px',
   backgroundColor: '#D4AF37',
   display: 'block',
+  transition: '0.3s ease-in-out',
 };
 
 export default Header;
