@@ -21,18 +21,28 @@ const Booking: React.FC = () => {
   const handleTelegramOrder = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const message =
-      `🌟 *Нове бронювання Noir Lounge*%0A%0A` +
-      `👤 Ім'я: ${formData.name}%0A` +
-      `📞 Телефон: ${formData.phone}%0A` +
-      `📅 Дата: ${formData.date}%0A` +
-      `⏰ Час: ${formData.time}%0A` +
-      `👥 Гостей: ${formData.guests}`;
+    const myPhoneNumber = '380684694673';
 
-    const telegramUrl =
-      `https://t.me/share/url?url=Бронювання&text=${message}`;
+    const textToCopy = `Привіт! Хочу забронювати стіл:
+👤 Ім'я: ${formData.name}
+📞 Тел: ${formData.phone}
+📅 Дата: ${formData.date}
+⏰ Час: ${formData.time}
+👥 Гостей: ${formData.guests}`;
 
-    window.open(telegramUrl, '_blank');
+    const telegramUrl = `https://t.me/+${myPhoneNumber}`;
+
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        alert(
+          'Дані бронювання скопійовано! Просто вставте їх у чат Telegram.'
+        );
+        window.open(telegramUrl, '_blank');
+      })
+      .catch(() => {
+        window.open(telegramUrl, '_blank');
+      });
   };
 
   return (
