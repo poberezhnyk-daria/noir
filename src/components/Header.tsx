@@ -19,71 +19,37 @@ const Header: React.FC = () => {
   return (
     <header
       style={{
-        padding: scrolled ? '10px 0' : '20px 0',
         position: 'fixed',
         width: '100%',
         top: 0,
-        backgroundColor: scrolled
-          ? 'rgba(10, 10, 10, 0.95)'
-          : 'transparent',
-        backdropFilter: scrolled ? 'blur(10px)' : 'none',
-        borderBottom: scrolled
-          ? '1px solid rgba(212, 175, 55, 0.2)'
-          : '1px solid transparent',
-        transition: 'all 0.4s ease-in-out',
         zIndex: 1000,
+        transition: 'all 0.4s ease-in-out',
       }}
     >
+      {/* Основна навігація (тільки меню посередині) */}
       <div
-        className="container"
         style={{
+          padding: scrolled ? '15px 30px' : '30px 30px',
+          backgroundColor: scrolled
+            ? 'rgba(10, 10, 10, 0.95)'
+            : 'transparent',
+          backdropFilter: scrolled ? 'blur(10px)' : 'none',
+          borderBottom: scrolled
+            ? '1px solid rgba(212, 175, 55, 0.2)'
+            : 'none',
           display: 'flex',
-          justifyContent: 'space-between',
           alignItems: 'center',
-          padding: '0 30px',
+          justifyContent: 'center',
+          transition: 'all 0.4s ease',
+          position: 'relative',
         }}
       >
-        {/* Логотип зліва */}
-        <div
-          className="header-logo"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          <img
-            src="/logo.jpg"
-            alt="NOIR"
-            style={{
-              height: scrolled ? '45px' : '65px',
-              width: scrolled ? '45px' : '65px',
-              borderRadius: '50%',
-              objectFit: 'cover',
-              border: '1px solid rgba(212, 175, 55, 0.5)',
-              transition: 'all 0.4s ease',
-            }}
-          />
-
-          <span
-            style={{
-              marginLeft: '15px',
-              fontSize: '1.2rem',
-              letterSpacing: '4px',
-              color: '#D4AF37',
-              fontWeight: '300',
-              display: scrolled ? 'none' : 'block',
-            }}
-          >
-            NOIR
-          </span>
-        </div>
-
         {/* Десктопне меню */}
         <nav className="desktop-nav">
           <ul
             style={{
               display: 'flex',
-              gap: '40px',
+              gap: '60px',
               listStyle: 'none',
               margin: 0,
               padding: 0,
@@ -106,40 +72,26 @@ const Header: React.FC = () => {
                 БРОНЮВАННЯ
               </a>
             </li>
-
-            <li>
-              <a
-                href="https://www.instagram.com/noir.loungebar?igsh=MmZjcHB4OGNtZXoy"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  ...navLinkStyle,
-                  color: '#D4AF37',
-                }}
-              >
-                INSTAGRAM
-              </a>
-            </li>
           </ul>
         </nav>
 
-        {/* Кнопка Гамбургер */}
+        {/* Гамбургер для мобілок */}
         <button
           className="hamburger"
           onClick={toggleMenu}
           style={{
             display: 'none',
+            position: 'absolute',
+            right: '30px',
             flexDirection: 'column',
             gap: '7px',
             background: 'none',
             border: 'none',
             cursor: 'pointer',
-            padding: '5px',
           }}
         >
-          <span style={{ ...lineStyle, width: '30px' }} />
-          <span style={{ ...lineStyle, width: '20px' }} />
-          <span style={{ ...lineStyle, width: '30px' }} />
+          <span style={{ ...lineStyle, width: '30px' }}></span>
+          <span style={{ ...lineStyle, width: '20px' }}></span>
         </button>
 
         {/* Мобільне меню */}
@@ -198,17 +150,7 @@ const Header: React.FC = () => {
                 БРОНЮВАННЯ
               </a>
             </li>
-
-            <li>
-              <a
-                href="https://www.instagram.com/noir.loungebar?igsh=MmZjcHB4OGNtZXoy"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  ...mobileNavLinkStyle,
-                  color: '#D4AF37',
-                }}
-              >
+          </ul>
 
           <button
             onClick={toggleMenu}
@@ -232,13 +174,12 @@ const Header: React.FC = () => {
 };
 
 const navLinkStyle: React.CSSProperties = {
-  fontSize: '0.8rem',
-  letterSpacing: '3px',
+  fontSize: '0.9rem',
+  letterSpacing: '5px',
   color: 'white',
   textDecoration: 'none',
   fontWeight: '400',
   transition: '0.3s ease',
-  position: 'relative',
 };
 
 const mobileNavLinkStyle: React.CSSProperties = {
@@ -247,14 +188,12 @@ const mobileNavLinkStyle: React.CSSProperties = {
   color: 'white',
   textDecoration: 'none',
   fontWeight: '300',
-  transition: '0.3s',
 };
 
 const lineStyle: React.CSSProperties = {
   height: '1px',
   backgroundColor: '#D4AF37',
   display: 'block',
-  transition: '0.3s',
 };
 
 export default Header;
