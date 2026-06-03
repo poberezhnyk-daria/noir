@@ -53,8 +53,15 @@ const Footer: React.FC = () => {
           </div>
 
           <div style={{ display: 'flex', gap: '20px', marginTop: '10px' }}>
-            <a href="#" className="gold-text">Instagram</a>
-            <a href="#" className="gold-text">Facebook</a>
+            <a 
+
+          href="https://www.instagram.com/noir.loungebar?igsh=MmZjcHB4OGNtZXoy" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="gold-text"
+           >
+             Instagram
+            </a>
           </div>
           
           <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)', marginTop: '20px' }}>
