@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Booking: React.FC = () => {
-  // Ваша актуальна Google Форма
   const googleFormUrl =
     'https://docs.google.com/forms/d/e/1FAIpQLSeiDoJ5rDpmYvftLwQkiA4N1Qz9P0QhybX0KlFQcke5RucjRA/viewform?usp=dialog';
 
@@ -32,12 +31,12 @@ const Booking: React.FC = () => {
         <div
           style={{
             width: '100%',
-            height: '750px',
+            height: '800px',
             borderRadius: '12px',
             overflow: 'hidden',
-            border: '1px solid rgba(212, 175, 55, 0.2)',
-            boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-            backgroundColor: 'white',
+            border: '1px solid rgba(212, 175, 55, 0.4)',
+            boxShadow: '0 0 25px rgba(212, 175, 55, 0.1)',
+            backgroundColor: '#ffffff',
           }}
         >
           <iframe
@@ -47,6 +46,7 @@ const Booking: React.FC = () => {
             frameBorder="0"
             marginHeight={0}
             marginWidth={0}
+            style={{ display: 'block' }}
           >
             Завантаження...
           </iframe>
@@ -55,22 +55,28 @@ const Booking: React.FC = () => {
         <div
           style={{
             textAlign: 'center',
-            marginTop: '30px',
+            marginTop: '40px',
           }}
         >
           <p
             style={{
               color: 'var(--text-muted)',
+              fontSize: '1rem',
             }}
           >
-            Також ви можете забронювати за телефоном:
+            Віддаєте перевагу живому спілкуванню?
+            <br />
+            Зателефонуйте нам:
             <br />
             <a
               href="tel:+380963635324"
               className="gold-text"
               style={{
                 fontWeight: 'bold',
-                fontSize: '1.2rem',
+                fontSize: '1.4rem',
+                textDecoration: 'none',
+                marginTop: '10px',
+                display: 'inline-block',
               }}
             >
               +380 96 363 5324
