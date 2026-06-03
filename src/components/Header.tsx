@@ -209,10 +209,6 @@ const Header: React.FC = () => {
                   color: '#D4AF37',
                 }}
               >
-                INSTAGRAM
-              </a>
-            </li>
-          </ul>
 
           <button
             onClick={toggleMenu}
