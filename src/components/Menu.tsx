@@ -59,7 +59,7 @@ const Menu: React.FC = () => {
           }}
         >
           <img
-            src="/menu.pdf"
+            src="/public/menu.pdf"
             alt="Меню Noir Lounge Bar"
             style={{
               width: '100%',
