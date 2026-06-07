@@ -5,7 +5,7 @@ import Booking from './components/Booking'
 import Reviews from './components/Reviews'
 import Footer from './components/Footer'
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />
@@ -20,4 +20,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
