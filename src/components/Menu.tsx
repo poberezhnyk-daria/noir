@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Menu: React.FC = () => {
-  const menuImages = ['/menu1.JPG', '/menu2.JPG', '/menu3.JPG'];
+  const menuImages = ['/mebu1.JPG', '/menu2.JPG', '/menu3.JPG'];
 
   return (
     <section
