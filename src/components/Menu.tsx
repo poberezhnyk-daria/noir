@@ -104,50 +104,121 @@ const menuData: MenuCategory[] = [
 
 const Menu: React.FC = () => {
   return (
-    <section id="menu" style={{ padding: '100px 0', backgroundColor: 'var(--bg-primary)' }}>
+    <section
+      id="menu"
+      style={{
+        padding: '100px 0',
+        backgroundColor: '#0F0F0F',
+        backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 80%)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          opacity: 0.03,
+          pointerEvents: 'none',
+          backgroundImage: 'url("https://www.transparenttextures.com/patterns/black-linen.png")'
+        }}
+      ></div>
+
       <div className="container">
-        <h2 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '60px', letterSpacing: '6px', textTransform: 'uppercase', fontWeight: '300' }}>
+        <h2
+          style={{
+            textAlign: 'center',
+            fontSize: '3rem',
+            marginBottom: '60px',
+            letterSpacing: '6px',
+            textTransform: 'uppercase',
+            fontWeight: '300'
+          }}
+        >
           Наше <span className="gold-text">Меню</span>
         </h2>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(450px, 1fr))',
-          gap: '40px 60px',
-          maxWidth: '1200px',
-          margin: '0 auto'
-        }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(450px, 1fr))',
+            gap: '40px 60px',
+            maxWidth: '1200px',
+            margin: '0 auto'
+          }}
+        >
           {menuData.map((category, idx) => (
             <div key={idx} style={{ marginBottom: '20px' }}>
-              <h3 style={{
-                fontSize: '1.4rem',
-                color: 'var(--accent-gold)',
-                borderBottom: '1px solid rgba(212, 175, 55, 0.3)',
-                paddingBottom: '8px',
-                marginBottom: '20px',
-                letterSpacing: '2px',
-                textTransform: 'uppercase'
-              }}>
+              <h3
+                style={{
+                  fontSize: '1.4rem',
+                  color: 'var(--accent-gold)',
+                  borderBottom: '1px solid rgba(212, 175, 55, 0.3)',
+                  paddingBottom: '8px',
+                  marginBottom: '20px',
+                  letterSpacing: '2px',
+                  textTransform: 'uppercase'
+                }}
+              >
                 {category.title}
               </h3>
 
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 {category.items.map((item, itemIdx) => (
                   <li key={itemIdx} style={{ marginBottom: '18px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                      <span style={{ color: 'var(--text-main)', fontSize: '1.05rem', fontWeight: '400', flex: '1' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'baseline'
+                      }}
+                    >
+                      <span
+                        style={{
+                          color: 'var(--text-main)',
+                          fontSize: '1.05rem',
+                          fontWeight: '400',
+                          flex: '1'
+                        }}
+                      >
                         {item.name}
                       </span>
-                      <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem', margin: '0 10px', whiteSpace: 'nowrap' }}>
+
+                      <span
+                        style={{
+                          color: 'var(--text-muted)',
+                          fontSize: '0.85rem',
+                          margin: '0 10px',
+                          whiteSpace: 'nowrap'
+                        }}
+                      >
                         {item.weight}
                       </span>
-                      <span style={{ color: 'var(--accent-gold)', fontWeight: '600', minWidth: '70px', textAlign: 'right' }}>
+
+                      <span
+                        style={{
+                          color: 'var(--accent-gold)',
+                          fontWeight: '600',
+                          minWidth: '70px',
+                          textAlign: 'right'
+                        }}
+                      >
                         {item.price}
                       </span>
                     </div>
 
                     {item.description && (
-                      <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: '4px', fontStyle: 'italic' }}>
+                      <p
+                        style={{
+                          color: 'var(--text-muted)',
+                          fontSize: '0.8rem',
+                          marginTop: '4px',
+                          fontStyle: 'italic'
+                        }}
+                      >
                         {item.description}
                       </p>
                     )}
