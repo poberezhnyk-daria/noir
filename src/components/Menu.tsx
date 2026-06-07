@@ -17,6 +17,20 @@ const Menu: React.FC = () => {
         className="container"
         style={{ maxWidth: '900px' }}
       >
+        <h2
+          style={{
+            textAlign: 'center',
+            fontSize: '3rem',
+            marginBottom: '60px',
+            letterSpacing: '6px',
+            textTransform: 'uppercase',
+            fontWeight: '300',
+            color: '#D4AF37'
+          }}
+        >
+          Меню
+        </h2>
+
         <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
           {menuImages.map((src, index) => (
             <div
