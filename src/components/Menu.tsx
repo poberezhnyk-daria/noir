@@ -104,29 +104,7 @@ const menuData: MenuCategory[] = [
 
 const Menu: React.FC = () => {
   return (
-    <section
-      id="menu"
-      style={{
-        padding: '100px 0',
-        backgroundColor: '#0F0F0F',
-        backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 80%)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}
-    >
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          opacity: 0.03,
-          pointerEvents: 'none',
-          backgroundImage: 'url("https://www.transparenttextures.com/patterns/black-linen.png")'
-        }}
-      ></div>
-
+    <section id="menu" style={{ padding: '100px 0', backgroundColor: 'var(--bg-primary)' }}>
       <div className="container">
         <h2
           style={{
@@ -138,7 +116,7 @@ const Menu: React.FC = () => {
             fontWeight: '300'
           }}
         >
-          Наше <span className="gold-text">Меню</span>
+          <span className="gold-text">Меню</span>
         </h2>
 
         <div
