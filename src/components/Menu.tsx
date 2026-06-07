@@ -15,40 +15,6 @@ const Menu: React.FC = () => {
         className="container"
         style={{ maxWidth: '900px' }}
       >
-        <div style={{ marginBottom: '60px' }}>
-          <h1
-            style={{
-              fontSize: '3.5rem',
-              letterSpacing: '8px',
-              marginBottom: '10px',
-              fontWeight: '700',
-              fontFamily: 'serif'
-            }}
-          >
-            NOIR
-          </h1>
-
-          <p
-            style={{
-              letterSpacing: '10px',
-              fontSize: '0.9rem',
-              color: '#A0A0A0',
-              textTransform: 'uppercase'
-            }}
-          >
-            Lounge Bar
-          </p>
-
-          <div
-            style={{
-              width: '100%',
-              height: '1px',
-              backgroundColor: 'rgba(212, 175, 55, 0.3)',
-              marginTop: '40px'
-            }}
-          />
-        </div>
-
         <div
           style={{
             width: '100%',
