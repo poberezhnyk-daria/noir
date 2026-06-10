@@ -9,13 +9,13 @@ interface MenuPage {
 const Menu: React.FC = () => {
   // Список ваших 7 сторінок.
   const menuPages: MenuPage[] = [
-    { src: '/m1.JPG', category: 'Їжа' },
-    { src: '/m2.JPG', category: 'Їжа' },
-    { src: '/m3.JPG', category: 'Їжа' },
-    { src: '/m4.JPG', category: 'Кальяни' },
-    { src: '/m5.JPG', category: 'Бар' },
-    { src: '/m6.JPG', category: 'Бар' },
-    { src: '/m7.JPG', category: 'Бар' },
+    { src: '/m1.jpg', category: 'Їжа' },
+    { src: '/m2.jpg', category: 'Їжа' },
+    { src: '/m3.jpg', category: 'Їжа' },
+    { src: '/m4.jpg', category: 'Кальяни' },
+    { src: '/m5.jpg', category: 'Бар' },
+    { src: '/m6.jpg', category: 'Бар' },
+    { src: '/m7.jpg', category: 'Бар' },
   ];
 
   // Список категорій для кнопок
