@@ -18,16 +18,16 @@ const Menu: React.FC = () => {
     { src: '/m7.jpg', category: 'Бар' },
   ];
 
-  // Список категорій для кнопок
-  const categories = ['Усе', 'Їжа', 'Кальяни', 'Бар'];
+  // Список категорій для кнопок (прибрали "Усе")
+  const categories = ['Їжа', 'Кальяни', 'Бар'];
 
-  const [activeCategory, setActiveCategory] = useState('Усе');
+  // Початкова категорія — "Їжа"
+  const [activeCategory, setActiveCategory] = useState('Їжа');
 
-  // Фільтрація сторінок залежно від обраної категорії
-  const filteredPages =
-    activeCategory === 'Усе'
-      ? menuPages
-      : menuPages.filter(page => page.category === activeCategory);
+  // Фільтрація сторінок (показуємо лише обрану категорію)
+  const filteredPages = menuPages.filter(
+    page => page.category === activeCategory
+  );
 
   return (
     <section id="menu" style={sectionStyle}>
