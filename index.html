@@ -1,24 +1,28 @@
 <!doctype html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Noir Lounge — Лаунж-бар в Ужгороді</title>
     <meta name="description" content="Noir Lounge — лаунж-бар в Ужгороді." />
     <meta name="keywords" content="Noir Lounge, Нуар Ужгород, лаунж бар Ужгород, Noir Uzhhorod" />
-
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="VSg5HC37S5VCwPq1E_FdId96ja-JqZY_6S9fze1EdVA" />
-
-    <!-- Open Graph (для соцмереж) -->
     <meta property="og:title" content="Noir Lounge — Лаунж-бар в Ужгороді" />
+    <meta property="og:site_name" content="Noir Lounge" />
     <meta property="og:description" content="Лаунж-бар в Ужгороді." />
     <meta property="og:image" content="/logo.jpg" />
     <meta property="og:type" content="website" />
+    <meta name="google-site-verification" content="VSg5HC37S5VCwPq1E_FdId96ja-JqZY_6S9fze1EdVA" />
 
-    <!-- Structured Data (для Google Карт та Пошуку) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Noir Lounge",
+      "url": "https://noir-loungebar.vercel.app"
+    }
+    </script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -43,13 +47,22 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
           "opens": "13:00",
           "closes": "00:00"
         },
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Friday", "Saturday", "Sunday"],
+          "dayOfWeek": [
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
           "opens": "12:00",
           "closes": "02:00"
         }
@@ -61,6 +74,7 @@
     }
     </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
