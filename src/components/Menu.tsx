@@ -19,17 +19,12 @@ const Menu: React.FC = () => {
                 <div key={i} style={menuItemStyle}>
                   <div style={itemMainRowStyle}>
                     <span style={itemNameStyle}>{item.name}</span>
-                    <div style={dotLeaderStyle}></div>
                     <span style={itemPriceStyle}>{item.price}</span>
                   </div>
                   {(item.weight || item.description) && (
                     <div style={itemSubRowStyle}>
-                      {item.description && (
-                        <span style={itemDescStyle}>{item.description}</span>
-                      )}
-                      {item.weight && (
-                        <span style={itemWeightStyle}>{item.weight}</span>
-                      )}
+                      {item.description && <span style={itemDescStyle}>{item.description}</span>}
+                      {item.weight && <span style={itemWeightStyle}>{item.weight}</span>}
                     </div>
                   )}
                 </div>
@@ -114,8 +109,8 @@ const tabButtonStyle: React.CSSProperties = {
 // Text Menu Styles
 const menuGridStyle: React.CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-  gap: '40px',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+  gap: '50px',
   textAlign: 'left',
 };
 
@@ -124,44 +119,42 @@ const categorySectionStyle: React.CSSProperties = {
 };
 
 const categoryTitleStyle: React.CSSProperties = {
-  fontSize: '1.5rem',
+  fontSize: '1.6rem',
   color: '#D4AF37',
   borderBottom: '1px solid rgba(212, 175, 55, 0.3)',
   paddingBottom: '10px',
-  marginBottom: '20px',
+  marginBottom: '25px',
   textTransform: 'uppercase',
   letterSpacing: '2px',
+  fontWeight: '400',
 };
 
 const itemsListStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  gap: '15px',
+  gap: '20px',
 };
 
 const menuItemStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
+  borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+  paddingBottom: '10px',
 };
 
 const itemMainRowStyle: React.CSSProperties = {
   display: 'flex',
+  justifyContent: 'space-between',
   alignItems: 'baseline',
-  width: '100%',
+  gap: '15px',
 };
 
 const itemNameStyle: React.CSSProperties = {
-  fontSize: '1.1rem',
-  textTransform: 'uppercase',
-  letterSpacing: '1px',
-  whiteSpace: 'nowrap',
-};
-
-const dotLeaderStyle: React.CSSProperties = {
-  flexGrow: 1,
-  borderBottom: '1px dotted rgba(212, 175, 55, 0.4)',
-  margin: '0 10px',
-  height: '1px',
+  fontSize: '1.2rem',
+  fontFamily: 'Georgia, serif',
+  fontStyle: 'italic',
+  color: '#FFFFFF',
+  letterSpacing: '0.5px',
 };
 
 const itemPriceStyle: React.CSSProperties = {
@@ -174,17 +167,18 @@ const itemPriceStyle: React.CSSProperties = {
 const itemSubRowStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'space-between',
-  fontSize: '0.85rem',
-  color: 'rgba(255, 255, 255, 0.6)',
-  marginTop: '4px',
+  fontSize: '0.9rem',
+  color: 'rgba(255, 255, 255, 0.5)',
+  marginTop: '5px',
 };
 
 const itemDescStyle: React.CSSProperties = {
-  fontStyle: 'italic',
+  fontStyle: 'normal',
 };
 
 const itemWeightStyle: React.CSSProperties = {
   marginLeft: 'auto',
+  color: 'rgba(212, 175, 55, 0.6)',
 };
 
 export default Menu;
