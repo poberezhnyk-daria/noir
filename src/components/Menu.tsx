@@ -150,11 +150,11 @@ const itemMainRowStyle: React.CSSProperties = {
 };
 
 const itemNameStyle: React.CSSProperties = {
-  fontSize: '1.2rem',
-  fontFamily: 'Georgia, serif',
-  fontStyle: 'italic',
+  fontSize: '1.1rem',
+  textTransform: 'uppercase',
   color: '#FFFFFF',
-  letterSpacing: '0.5px',
+  letterSpacing: '1.5px',
+  fontWeight: '500',
 };
 
 const itemPriceStyle: React.CSSProperties = {
@@ -167,9 +167,11 @@ const itemPriceStyle: React.CSSProperties = {
 const itemSubRowStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'space-between',
-  fontSize: '0.9rem',
-  color: 'rgba(255, 255, 255, 0.5)',
+  fontSize: '0.85rem',
+  color: 'rgba(255, 255, 255, 0.6)',
   marginTop: '5px',
+  textTransform: 'uppercase',
+  letterSpacing: '1px',
 };
 
 const itemDescStyle: React.CSSProperties = {
