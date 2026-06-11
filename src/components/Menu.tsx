@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { menuData } from '../menuData';
-import type { MenuCategory } from '../menuData'; // Обов'язково зі словом 'type'
+import type { MenuCategory } from '../menuData'; 
 
 const Menu: React.FC = () => {
   const categories = ['Їжа', 'Кальяни', 'Бар'];
