@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { menuData } from '../menuData';
-import type { MenuCategory } from '../menuData'; // Додано слово type
+import type { MenuCategory } from '../menuData';
 
 const Menu: React.FC = () => {
   const categories = ['Їжа', 'Кальяни', 'Бар'];
@@ -19,6 +19,7 @@ const Menu: React.FC = () => {
                 <div key={i} style={menuItemStyle}>
                   <div style={itemMainRowStyle}>
                     <span style={itemNameStyle}>{item.name}</span>
+                    <div style={dotLeaderStyle}></div>
                     <span style={itemPriceStyle}>{item.price}</span>
                   </div>
                   {(item.weight || item.description) && (
@@ -145,21 +146,29 @@ const menuItemStyle: React.CSSProperties = {
 
 const itemMainRowStyle: React.CSSProperties = {
   display: 'flex',
-  justifyContent: 'space-between',
   alignItems: 'baseline',
-  gap: '10px',
+  width: '100%',
 };
 
 const itemNameStyle: React.CSSProperties = {
   fontSize: '1.1rem',
   textTransform: 'uppercase',
   letterSpacing: '1px',
+  whiteSpace: 'nowrap',
+};
+
+const dotLeaderStyle: React.CSSProperties = {
+  flexGrow: 1,
+  borderBottom: '1px dotted rgba(212, 175, 55, 0.4)',
+  margin: '0 10px',
+  height: '1px',
 };
 
 const itemPriceStyle: React.CSSProperties = {
   fontSize: '1.1rem',
   color: '#D4AF37',
   fontWeight: 'bold',
+  whiteSpace: 'nowrap',
 };
 
 const itemSubRowStyle: React.CSSProperties = {
