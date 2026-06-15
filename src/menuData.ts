@@ -229,47 +229,47 @@ export const menuData: MenuData = {
     {
       title: 'ШОТИ',
       items: [
-        { name: 'б - 52', description: '(кавовий лікер, baileys, triple sec)', price: '150 грн' },
-        { name: 'electrolit', description: '(самбука, Jägermeister)', price: '150 грн' },
-        { name: 'б - 53', description: '(кавовий лікер, baileys, абсент)', price: '160 грн' },
-        { name: 'б - 56', description: '(кавовий лікер, baileys, Jägermeister)', price: '150 грн' },
-        { name: 'дядя ваня по - херсонськи', description: '(рожевий джин, лимонний фреш, гренадин)', price: '150 грн' },
-        { name: 'зелений мексиканець', description: '(pisang, текіла, лимонний фреш)', price: '160 грн' },
-        { name: 'постріл у голову', description: '(baileys, віскі)', price: '160 грн' },
-        { name: 'хіросіма', description: '(baileys, самбука, абсент)', price: '170 грн' },
+        { name: 'б - 52', description: 'кавовий лікер, baileys, triple sec', price: '150 грн' },
+        { name: 'electrolit', description: 'самбука, Jägermeister', price: '150 грн' },
+        { name: 'б - 53', description: 'кавовий лікер, baileys, абсент', price: '160 грн' },
+        { name: 'б - 56', description: 'кавовий лікер, baileys, Jägermeister', price: '150 грн' },
+        { name: 'дядя ваня по - херсонськи', description: 'рожевий джин, лимонний фреш, гренадин', price: '150 грн' },
+        { name: 'зелений мексиканець', description: 'pisang, текіла, лимонний фреш', price: '160 грн' },
+        { name: 'постріл у голову', description: 'baileys, віскі', price: '160 грн' },
+        { name: 'хіросіма', description: 'baileys, самбука, абсент', price: '170 грн' },
       ]
     },
     {
       title: 'LONG DRINKS',
       items: [
-        { name: 'long island', description: '(ром, текіла, джин, горілка, triple sec, кола)', price: '250 грн' },
-        { name: 'tropical bibi', description: '(ром, pisang, маракуя, персик)', price: '220 грн' },
-        { name: 'схована загроза', description: '(текіла, кокосовий лікер, ананас)', price: '240 грн' },
-        { name: 'fruit island', description: '(ром, текіла, джин, горілка, маракуя)', price: '250 грн' },
-        { name: 'огірковий джин-тонік', description: '(джин, тонік, лайм, огірок)', price: '200 грн' },
+        { name: 'long island', description: 'ром, текіла, джин, горілка, triple sec, кола', price: '250 грн' },
+        { name: 'tropical bibi', description: 'ром, pisang, маракуя, персик', price: '220 грн' },
+        { name: 'схована загроза', description: 'текіла, кокосовий лікер, ананас', price: '240 грн' },
+        { name: 'fruit island', description: 'ром, текіла, джин, горілка, маракуя', price: '250 грн' },
+        { name: 'огірковий джин-тонік', description: 'джин, тонік, лайм, огірок', price: '200 грн' },
       ]
     },
     {
       title: 'SOUR',
       items: [
-        { name: 'clover club', description: '(джим, малина, лайм)', price: '220 грн' },
-        { name: 'whiskey sour', description: '(бурбон, лайм, цукровий сироп)', price: '220 грн' },
-        { name: 'noir sour', description: '(рожевий джин, pisang, малина, ананас)', price: '240 грн' },
-        { name: 'new york sour', description: '(віскі, мед, червоне вино)', price: '250 грн' },
-        { name: 'passion sour', description: '(віскі, маракуя, лимон)', price: '230 грн' },
-        { name: 'cherry sour', description: '(віскі, вишня, лимон)', price: '230 грн' },
-        { name: 'aperol sour', description: '(aperol. джин, лимон)', price: '220 грн' },
-        { name: 'peach sour', description: '(джин, персик, triple sec)', price: '220 грн' },
-        { name: 'porn star martini', description: '(ванільна горілка, маракуя, prosecco)', price: '280 грн' },
+        { name: 'clover club', description: 'джим, малина, лайм', price: '220 грн' },
+        { name: 'whiskey sour', description: 'бурбон, лайм, цукровий сироп', price: '220 грн' },
+        { name: 'noir sour', description: 'рожевий джин, pisang, малина, ананас', price: '240 грн' },
+        { name: 'new york sour', description: 'віскі, мед, червоне вино', price: '250 грн' },
+        { name: 'passion sour', description: 'віскі, маракуя, лимон', price: '230 грн' },
+        { name: 'cherry sour', description: 'віскі, вишня, лимон', price: '230 грн' },
+        { name: 'aperol sour', description: 'aperol, джин, лимон', price: '220 грн' },
+        { name: 'peach sour', description: 'джин, персик, triple sec', price: '220 грн' },
+        { name: 'porn star martini', description: 'ванільна горілка, маракуя, prosecco', price: '280 грн' },
       ]
     },
     {
       title: 'SPRITZ & CLASSICS',
       items: [
-        { name: 'aperol spritz', description: '(aperol, prosecco, содова)', price: '200 грн' },
-        { name: 'aperol spritz bunny', description: '(aperol, prosecco, морквяний фреш)', price: '210 грн' },
-        { name: 'hugo', description: '(prosecco, бузина, лайм, м’ята)', price: '210 грн' },
-        { name: 'bellini', description: '(prosecco, персикове пюре)', price: '210 грн' },
+        { name: 'aperol spritz', description: 'aperol, prosecco, содова', price: '200 грн' },
+        { name: 'aperol spritz bunny', description: 'aperol, prosecco, морквяний фреш', price: '210 грн' },
+        { name: 'hugo', description: 'prosecco, бузина, лайм, м’ята', price: '210 грн' },
+        { name: 'bellini', description: 'prosecco, персикове пюре', price: '210 грн' },
       ]
     },
     {
@@ -286,19 +286,19 @@ export const menuData: MenuData = {
       items: [
         { name: 'холодний чай з гренадином', price: '95 грн' },
         { name: 'холодний чай каркаде', price: '90 грн' },
-        { name: 'холодний чай mona', description: '(бергамот, персик, базилік)', price: '115 грн' },
+        { name: 'холодний чай mona', description: 'бергамот, персик, базилік', price: '115 грн' },
       ]
     },
     {
       title: 'ЛИМОНАДИ',
       items: [
-        { name: 'класичний лимонад', description: '(лимон, м’ята)', price: '120 грн' },
-        { name: 'полуничний лимонад', description: '(полуниця, лимон, м’ята)', price: '130 грн' },
-        { name: 'полуничний - базиліковий лимонад', description: '(полуниця, лимон, базилік)', price: '135 грн' },
-        { name: 'малиновий лимонад', description: '(малина, лимон, м’ята)', price: '130 грн' },
-        { name: 'тропічний лимонад', description: '(манго, маракуя, лимон)', price: '120 грн' },
-        { name: 'ягідний лимонад', description: '(полуниця, малина, лимон)', price: '120 грн' },
-        { name: 'ананасово - базиліковий лимонад', description: '(ананас, базилік, кокос)', price: '135 грн' },
+        { name: 'класичний лимонад', description: 'лимон, м’ята', price: '120 грн' },
+        { name: 'полуничний лимонад', description: 'полуниця, лимон, м’ята', price: '130 грн' },
+        { name: 'полуничний - базиліковий лимонад', description: 'полуниця, лимон, базилік', price: '135 грн' },
+        { name: 'малиновий лимонад', description: 'малина, лимон, м’ята', price: '130 грн' },
+        { name: 'тропічний лимонад', description: 'манго, маракуя, лимон', price: '120 грн' },
+        { name: 'ягідний лимонад', description: 'полуниця, малина, лимон', price: '120 грн' },
+        { name: 'ананасово - базиліковий лимонад', description: 'ананас, базилік, кокос', price: '135 грн' },
       ]
     },
     {
