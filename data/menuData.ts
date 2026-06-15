@@ -177,6 +177,50 @@ export const menuData: MenuData = {
         { name: 'сік granini яблучний', weight: '0,25л', price: '75 грн' },
         { name: 'сік granini томатний', weight: '0,25л', price: '75 грн' },
       ]
+    },
+    {
+      title: 'Виски (50 мл)',
+      items: [
+        { name: 'Ballantine’s Finest', price: '180 грн' },
+        { name: 'Jameson', price: '160 грн' },
+        { name: 'Jack Daniel’s', price: '150 грн' },
+        { name: 'Jack Daniel’s apple', price: '140 грн' },
+        { name: 'Chivas Regal 12', price: '250 грн' },
+      ]
+    },
+    {
+      title: 'Ром (50 мл)',
+      items: [
+        { name: 'Bacardi Carta Blanca', price: '130 грн' },
+        { name: 'Bacardi black', price: '130 грн' },
+        { name: 'Bacardi Superior Carta', price: '130 грн' },
+        { name: 'Pirat XO 40%', price: '205 грн' },
+        { name: 'Bumbu original', price: '250 грн' },
+      ]
+    },
+    {
+      title: 'Джин (50 мл)',
+      items: [
+        { name: 'Beefeater blood', price: '130 грн' },
+        { name: 'Beefeater Blood orange', price: '150 грн' },
+        { name: 'Bombay Sapphire', price: '130 грн' },
+      ]
+    },
+    {
+      title: 'Текила (50 мл)',
+      items: [
+        { name: 'Olmeca Silver', price: '130 грн' },
+        { name: 'Olmeca ALTOS REPOSADO', price: '210 грн' },
+        { name: 'Patron silver', price: '280 грн' },
+      ]
+    },
+    {
+      title: 'Водка (50 мл)',
+      items: [
+        { name: 'Finlandia', price: '140 грн' },
+        { name: 'Absolut mango', price: '100 грн' },
+        { name: 'Grey', price: '150 грн' },
+      ]
     }
   ],
   'Кальяни': [
