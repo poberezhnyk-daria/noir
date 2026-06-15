@@ -96,7 +96,7 @@ export const menuData: MenuData = {
   ],
   'Бар': [
     {
-      title: 'шоти',
+      title: 'ШОТИ',
       items: [
         { name: 'б - 52', description: '(кавовий лікер, baileys, triple sec)', price: '150 грн' },
         { name: 'electrolit', description: '(самбука, Jägermeister)', price: '150 грн' },
@@ -109,7 +109,7 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'long drinks',
+      title: 'LONG DRINKS',
       items: [
         { name: 'long island', description: '(ром, текіла, джин, горілка, triple sec, кола)', price: '250 грн' },
         { name: 'tropical bibi', description: '(ром, pisang, маракуя, персик)', price: '220 грн' },
@@ -119,7 +119,7 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'sour',
+      title: 'SOUR',
       items: [
         { name: 'clover club', description: '(джим, малина, лайм)', price: '220 грн' },
         { name: 'whiskey sour', description: '(бурбон, лайм, цукровий сироп)', price: '220 грн' },
@@ -133,7 +133,7 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'spritz & classics',
+      title: 'SPRITZ & CLASSICS',
       items: [
         { name: 'aperol spritz', description: '(aperol, prosecco, содова)', price: '200 грн' },
         { name: 'aperol spritz bunny', description: '(aperol, prosecco, морквяний фреш)', price: '210 грн' },
@@ -142,7 +142,7 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'безалкогольні коктейлі',
+      title: 'БЕЗАЛКОГОЛЬНІ КОКТЕЙЛІ',
       items: [
         { name: 'мохіто б/а', price: '125 грн' },
         { name: 'апероль б/а', price: '130 грн' },
@@ -151,7 +151,7 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'холодні напої',
+      title: 'ХОЛОДНІ НАПОЇ',
       items: [
         { name: 'холодний чай з гренадином', price: '95 грн' },
         { name: 'холодний чай каркаде', price: '90 грн' },
@@ -159,7 +159,7 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'лимонади',
+      title: 'ЛИМОНАДИ',
       items: [
         { name: 'класичний лимонад', description: '(лимон, м’ята)', price: '120 грн' },
         { name: 'полуничний лимонад', description: '(полуниця, лимон, м’ята)', price: '130 грн' },
@@ -171,17 +171,61 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'соки',
+      title: 'СОКИ',
       items: [
         { name: 'сік granini мультифрукт', weight: '0,25л', price: '75 грн' },
         { name: 'сік granini яблучний', weight: '0,25л', price: '75 грн' },
         { name: 'сік granini томатний', weight: '0,25л', price: '75 грн' },
       ]
+    },
+    {
+      title: 'ВІСКІ (50 МЛ)',
+      items: [
+        { name: 'Ballantine’s Finest', price: '180 грн' },
+        { name: 'Jameson', price: '160 грн' },
+        { name: 'Jack Daniel’s', price: '150 грн' },
+        { name: 'Jack Daniel’s apple', price: '140 грн' },
+        { name: 'Chivas Regal 12', price: '250 грн' },
+      ]
+    },
+    {
+      title: 'РОМ (50 МЛ)',
+      items: [
+        { name: 'Bacardi Carta Blanca', price: '130 грн' },
+        { name: 'Bacardi black', price: '130 грн' },
+        { name: 'Bacardi Superior Carta', price: '130 грн' },
+        { name: 'Pirat XO 40%', price: '205 грн' },
+        { name: 'Bumbu original', price: '250 грн' },
+      ]
+    },
+    {
+      title: 'ДЖИН (50 МЛ)',
+      items: [
+        { name: 'Beefeater blood', price: '130 грн' },
+        { name: 'Beefeater Blood orange', price: '150 грн' },
+        { name: 'Bombay Sapphire', price: '130 грн' },
+      ]
+    },
+    {
+      title: 'ТЕКІЛА (50 МЛ)',
+      items: [
+        { name: 'Olmeca Silver', price: '130 грн' },
+        { name: 'Olmeca ALTOS REPOSADO', price: '210 грн' },
+        { name: 'Patron silver', price: '280 грн' },
+      ]
+    },
+    {
+      title: 'ГОРІЛКА (50 МЛ)',
+      items: [
+        { name: 'Finlandia', price: '140 грн' },
+        { name: 'Absolut mango', price: '100 грн' },
+        { name: 'Grey Goose', price: '150 грн' },
+      ]
     }
   ],
   'Кальяни': [
     {
-      title: 'Кальяни',
+      title: 'КАЛЬЯНИ',
       items: [
         { name: 'Light', price: '350 грн' },
         { name: 'Premium', price: '450 грн' },
@@ -189,7 +233,7 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'Фруктові чаші',
+      title: 'ФРУКТОВІ ЧАШІ',
       items: [
         { name: 'Апельсин', price: '+100 грн' },
         { name: 'Грейпфрут', price: '+150 грн' },
@@ -197,11 +241,11 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'Комплекти',
+      title: 'КОМПЛЕКТИ',
       items: [
-        { name: 'Апельсинова чаша + фруктова колба', price: '+200 грн' },
-        { name: 'Грейпфрутова чаша + фруктова колба', price: '+250 грн' },
-        { name: 'Ананасова чаша + фруктова колба', price: '+400 грн' },
+        { name: '🍊 Апельсинова чаша + фруктова колба', price: '+200 грн' },
+        { name: '🍈 Грейпфрутова чаша + фруктова колба', price: '+250 грн' },
+        { name: '🍍 Ананасова чаша + фруктова колба', price: '+400 грн' },
       ]
     }
   ]
