@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { menuData } from '../menuData';
-import type { MenuCategory } from '../menuData'; 
+import type { MenuCategory } from '../menuData';
 
 const Menu: React.FC = () => {
   const categories = ['Їжа', 'Кальяни', 'Бар'];
@@ -19,12 +19,12 @@ const Menu: React.FC = () => {
                 <div key={i} style={menuItemStyle}>
                   <div style={itemMainRowStyle}>
                     <span style={itemNameStyle}>{item.name}</span>
+                    <div style={itemConnectorStyle}></div>
                     <span style={itemPriceStyle}>{item.price}</span>
                   </div>
-                  {(item.weight || item.description) && (
+                  {item.description && (
                     <div style={itemSubRowStyle}>
-                      {item.description && <span style={itemDescStyle}>{item.description}</span>}
-                      {item.weight && <span style={itemWeightStyle}>{item.weight}</span>}
+                      <span style={itemDescStyle}>{item.description}</span>
                     </div>
                   )}
                 </div>
@@ -40,7 +40,7 @@ const Menu: React.FC = () => {
     <section id="menu" style={sectionStyle}>
       <div
         className="container"
-        style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 20px' }}
+        style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 20px' }}
       >
         <h2 style={titleStyle}>Меню</h2>
 
@@ -51,11 +51,11 @@ const Menu: React.FC = () => {
               onClick={() => setActiveCategory(cat)}
               style={{
                 ...tabButtonStyle,
-                color: activeCategory === cat ? '#D4AF37' : '#FFFFFF',
+                color: activeCategory === cat ? '#D4AF37' : 'rgba(255, 255, 255, 0.5)',
                 borderBottom:
                   activeCategory === cat
-                    ? '2px solid #D4AF37'
-                    : '2px solid transparent',
+                    ? '1px solid #D4AF37'
+                    : '1px solid transparent',
               }}
             >
               {cat}
@@ -71,18 +71,18 @@ const Menu: React.FC = () => {
 
 // Styles
 const sectionStyle: React.CSSProperties = {
-  padding: '100px 0',
-  backgroundColor: '#0A0A0A',
+  padding: '120px 0',
+  backgroundColor: '#050505',
   color: '#FFFFFF',
   textAlign: 'center',
 };
 
 const titleStyle: React.CSSProperties = {
-  fontSize: '3rem',
-  marginBottom: '40px',
-  letterSpacing: '6px',
+  fontSize: '3.5rem',
+  marginBottom: '60px',
+  letterSpacing: '10px',
   textTransform: 'uppercase',
-  fontWeight: '300',
+  fontWeight: '200',
   color: '#D4AF37',
 };
 
@@ -90,97 +90,101 @@ const tabsContainerStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   flexWrap: 'wrap',
-  gap: '15px',
-  marginBottom: '50px',
+  gap: '30px',
+  marginBottom: '70px',
 };
 
 const tabButtonStyle: React.CSSProperties = {
   background: 'none',
   border: 'none',
-  padding: '10px 20px',
+  padding: '10px 5px',
   cursor: 'pointer',
-  fontSize: '1rem',
-  letterSpacing: '2px',
+  fontSize: '0.9rem',
+  letterSpacing: '3px',
   textTransform: 'uppercase',
-  transition: '0.3s',
+  transition: '0.4s cubic-bezier(0.4, 0, 0.2, 1)',
   outline: 'none',
 };
 
 // Text Menu Styles
 const menuGridStyle: React.CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-  gap: '50px',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+  columnGap: '80px',
+  rowGap: '40px',
   textAlign: 'left',
 };
 
 const categorySectionStyle: React.CSSProperties = {
-  marginBottom: '20px',
+  marginBottom: '30px',
 };
 
 const categoryTitleStyle: React.CSSProperties = {
-  fontSize: '1.6rem',
+  fontSize: '1.4rem',
   color: '#D4AF37',
-  borderBottom: '1px solid rgba(212, 175, 55, 0.3)',
-  paddingBottom: '10px',
-  marginBottom: '25px',
+  borderBottom: '1px solid rgba(212, 175, 55, 0.15)',
+  paddingBottom: '12px',
+  marginBottom: '30px',
   textTransform: 'uppercase',
-  letterSpacing: '2px',
-  fontWeight: '400',
+  letterSpacing: '4px',
+  fontWeight: '300',
 };
 
 const itemsListStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  gap: '20px',
+  gap: '25px',
 };
 
 const menuItemStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
-  paddingBottom: '10px',
+  gap: '6px',
 };
 
 const itemMainRowStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'baseline',
-  gap: '15px',
+  gap: '10px',
 };
 
 const itemNameStyle: React.CSSProperties = {
-  fontSize: '1.1rem',
+  fontSize: '1rem',
   textTransform: 'uppercase',
   color: '#FFFFFF',
-  letterSpacing: '1.5px',
-  fontWeight: '500',
+  letterSpacing: '2px',
+  fontWeight: '400',
+  whiteSpace: 'nowrap',
+};
+
+const itemConnectorStyle: React.CSSProperties = {
+  flex: 1,
+  borderBottom: '1px dotted rgba(212, 175, 55, 0.2)',
+  height: '1px',
+  marginBottom: '4px',
 };
 
 const itemPriceStyle: React.CSSProperties = {
-  fontSize: '1.1rem',
+  fontSize: '1rem',
   color: '#D4AF37',
-  fontWeight: 'bold',
+  fontWeight: '500',
   whiteSpace: 'nowrap',
+  letterSpacing: '1px',
 };
 
 const itemSubRowStyle: React.CSSProperties = {
   display: 'flex',
-  justifyContent: 'space-between',
   fontSize: '0.85rem',
-  color: 'rgba(255, 255, 255, 0.6)',
-  marginTop: '5px',
-  textTransform: 'uppercase',
-  letterSpacing: '1px',
+  color: 'rgba(255, 255, 255, 0.4)',
+  lineHeight: '1.4',
+  maxWidth: '90%',
 };
 
 const itemDescStyle: React.CSSProperties = {
-  fontStyle: 'normal',
+  fontStyle: 'italic',
+  textTransform: 'lowercase',
 };
 
-const itemWeightStyle: React.CSSProperties = {
-  marginLeft: 'auto',
-  color: 'rgba(212, 175, 55, 0.6)',
-};
 
 export default Menu;
