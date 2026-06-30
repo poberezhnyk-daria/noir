@@ -159,6 +159,14 @@ export const menuData: MenuData = {
           weight: '180 г', 
           price: '245 грн' 
         },
+        { 
+          name: 'Брускета з хамоном', 
+          price: '255 грн' 
+        },
+        { 
+          name: 'Брускета з лососем', 
+          price: '245 грн' 
+        },
       ]
     },
     {
@@ -226,6 +234,41 @@ export const menuData: MenuData = {
     }
   ],
   'Бар': [
+    {
+      title: 'КОКТЕЙЛІ',
+      items: [
+        { 
+          name: 'Elderflower Gin Garden', 
+          description: 'джин, сироп бузини, огірок, яблучний сік, лимонний фреш', 
+          price: '— грн' 
+        },
+        { 
+          name: 'Don\'t touch me, Rosie', 
+          description: 'золотий ром, амарето, гренадин, вершки, пудра малини', 
+          price: '— грн' 
+        },
+        { 
+          name: 'Май Тай', 
+          description: 'золотий ром, темний ром, трипл сек, амарето, апельсиновий сік, ананасовий сік, лимонний фреш, гренадин', 
+          price: '— грн' 
+        },
+        { 
+          name: 'Sangrita Spice', 
+          description: 'текіла, томатний сік, сицилійський сік, табаско, ворчестерський соус, чорний перець', 
+          price: '— грн' 
+        },
+        { 
+          name: 'Hawaii', 
+          description: 'золотий ром, кокосовий лікер, блю курасао, кокосове пюре, вершки, ананасовий сік', 
+          price: '— грн' 
+        },
+        { 
+          name: 'Pina Colada', 
+          description: 'золотий ром, кокосовий лікер, вершки, ананасове пюре, ананасовий сік', 
+          price: '— грн' 
+        },
+      ]
+    },
     {
       title: 'ШОТИ',
       items: [
@@ -307,6 +350,17 @@ export const menuData: MenuData = {
         { name: 'сік granini мультифрукт', weight: '0,25л', price: '75 грн' },
         { name: 'сік granini яблучний', weight: '0,25л', price: '75 грн' },
         { name: 'сік granini томатний', weight: '0,25л', price: '75 грн' },
+      ]
+    },
+    {
+      title: 'ПИВО',
+      items: [
+        { name: 'Stella Artois', weight: '0,5 л', price: '80 грн' },
+        { name: 'Stella Artois', weight: '0,3 л', price: '65 грн' },
+        { name: 'Blanche', weight: '0,5 л', price: '90 грн' },
+        { name: 'Blanche', weight: '0,3 л', price: '70 грн' },
+        { name: 'Leffe Brune', weight: '0,5 л', price: '110 грн' },
+        { name: 'Leffe Brune', weight: '0,3 л', price: '80 грн' },
       ]
     },
     {
