@@ -355,12 +355,12 @@ export const menuData: MenuData = {
     {
       title: 'ПИВО',
       items: [
-        { name: 'Stella Artois', weight: '0,5 л', price: '80 грн' },
-        { name: 'Stella Artois', weight: '0,3 л', price: '65 грн' },
-        { name: 'Blanche', weight: '0,5 л', price: '90 грн' },
-        { name: 'Blanche', weight: '0,3 л', price: '70 грн' },
-        { name: 'Leffe Brune', weight: '0,5 л', price: '110 грн' },
-        { name: 'Leffe Brune', weight: '0,3 л', price: '80 грн' },
+        { name: 'Stella Artois 0,5л', weight: '0,5 л', price: '80 грн' },
+        { name: 'Stella Artois 0,3л', weight: '0,3 л', price: '65 грн' },
+        { name: 'Blanche 0,5л', weight: '0,5 л', price: '90 грн' },
+        { name: 'Blanche 0,3л', weight: '0,3 л', price: '70 грн' },
+        { name: 'Leffe Brune 0,5л', weight: '0,5 л', price: '110 грн' },
+        { name: 'Leffe Brune 0,3л', weight: '0,3 л', price: '80 грн' },
       ]
     },
     {
