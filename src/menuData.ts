@@ -273,23 +273,19 @@ export const menuData: MenuData = {
         },
         {
           name: 'Бастурма',
-          weight: '50 г',
-          price: ''
+          price: '50 грн'
         },
         {
           name: 'Косичка',
-          weight: '100 г',
-          price: ''
+          price: '100 грн'
         },
         {
           name: 'Чорізо',
-          weight: '50 г',
-          price: ''
+          price: '50 грн'
         },
         {
           name: 'Кабаноси',
-          weight: '50 г',
-          price: ''
+          price: '70 грн'
         },
       ]
     },
