@@ -272,14 +272,14 @@ export const menuData: MenuData = {
     {
       title: 'ШОТИ',
       items: [
-        { name: 'б - 52', description: 'кавовий лікер, baileys, triple sec', price: '150 грн' },
-        { name: 'electrolit', description: 'самбука, Jägermeister', price: '150 грн' },
-        { name: 'б - 53', description: 'кавовий лікер, baileys, абсент', price: '160 грн' },
-        { name: 'б - 56', description: 'кавовий лікер, baileys, Jägermeister', price: '150 грн' },
-        { name: 'дядя ваня по - херсонськи', description: 'рожевий джин, лимонний фреш, гренадин', price: '150 грн' },
-        { name: 'зелений мексиканець', description: 'pisang, текіла, лимонний фреш', price: '160 грн' },
-        { name: 'постріл у голову', description: 'baileys, віскі', price: '160 грн' },
-        { name: 'хіросіма', description: 'baileys, самбука, абсент', price: '170 грн' },
+        { name: 'б - 52', description: 'кавовий лікер, baileys, triple sec', price: '210 грн' },
+        { name: 'electrolit', description: 'самбука, Jägermeister', price: '195 грн' },
+        { name: 'б - 53', description: 'кавовий лікер, baileys, абсент', price: '210 грн' },
+        { name: 'б - 56', description: 'кавовий лікер, baileys, Jägermeister', price: '210 грн' },
+        { name: 'дядя ваня по - херсонськи', description: 'рожевий джин, лимонний фреш, гренадин', price: '210 грн' },
+        { name: 'зелений мексиканець', description: 'pisang, текіла, лимонний фреш', price: '210 грн' },
+        { name: 'постріл у голову', description: 'baileys, віскі', price: '210 грн' },
+        { name: 'хіросіма', description: 'baileys, самбука, абсент', price: '210 грн' },
       ]
     },
     {
@@ -350,6 +350,8 @@ export const menuData: MenuData = {
         { name: 'сік granini мультифрукт', weight: '0,25л', price: '75 грн' },
         { name: 'сік granini яблучний', weight: '0,25л', price: '75 грн' },
         { name: 'сік granini томатний', weight: '0,25л', price: '75 грн' },
+        { name: 'сік апельсин', weight: '0,25л', price: '75 грн' },
+        { name: 'сік гранат', weight: '0,25л', price: '75 грн' },
       ]
     },
     {
