@@ -2,12 +2,12 @@ import React from 'react';
 
 const Gallery: React.FC = () => {
   const images = [
-    { src: '/photo_2026-07-10_13-17-32.jpg', alt: 'Gallery 1' },
-    { src: '/photo_2026-07-10_13-17-35.jpg', alt: 'Gallery 2' },
-    { src: '/photo_2026-07-10_13-17-38.jpg', alt: 'Gallery 3' },
-    { src: '/photo_2026-07-10_13-17-43.jpg', alt: 'Gallery 4' },
-    { src: '/photo_2026-07-10_13-17-46.jpg', alt: 'Gallery 5' },
-    { src: '/photo_2026-07-10_13-17-52.jpg', alt: 'Gallery 6' },
+    { src: '/ph1.jpg', alt: 'Gallery 1' },
+    { src: '/ph5.jpg', alt: 'Gallery 2' },
+    { src: '/ph2.jpg', alt: 'Gallery 3' },
+    { src: '/ph3.jpg', alt: 'Gallery 4' },
+    { src: '/ph6.jpg', alt: 'Gallery 5' },
+    { src: '/ph4.jpg', alt: 'Gallery 6' },
   ];
 
   return (
