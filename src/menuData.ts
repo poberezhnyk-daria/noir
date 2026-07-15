@@ -304,6 +304,14 @@ export const menuData: MenuData = {
           weight: '150 г', 
           price: '195 грн' 
         },
+        { 
+          name: 'Наполеон', 
+          price: '135 грн' 
+        },
+        { 
+          name: 'Чізкейк снікерс', 
+          price: '145 грн' 
+        },
       ]
     }
   ],
