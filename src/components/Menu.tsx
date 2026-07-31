@@ -3,7 +3,7 @@ import { menuData } from '../menuData';
 import type { MenuCategory } from '../menuData';
 
 const Menu: React.FC = () => {
-  const categories = ['Їжа', 'Кальяни', 'Бар'];
+  const categories = ['Їжа', 'Кальяни', 'Бар', 'Ігри'];
   const [activeCategory, setActiveCategory] = useState('Їжа');
 
   const renderContent = () => {
@@ -13,18 +13,43 @@ const Menu: React.FC = () => {
       <div style={menuGridStyle}>
         {data.map((cat, idx) => (
           <div key={idx} style={categorySectionStyle}>
-            <h3 style={categoryTitleStyle}>{cat.title}</h3>
+            <h3
+              style={{
+                ...categoryTitleStyle,
+                color: activeCategory === 'Ігри' ? '#7FE0FF' : categoryTitleStyle.color,
+              }}
+            >
+              {cat.title}
+            </h3>
             <div style={itemsListStyle}>
               {cat.items.map((item, i) => (
                 <div key={i} style={menuItemStyle}>
                   <div style={itemMainRowStyle}>
                     <span style={itemNameStyle}>{item.name}</span>
                     <div style={itemConnectorStyle}></div>
-                    <span style={itemPriceStyle}>{item.price}</span>
+                    <span
+                      style={{
+                        ...itemPriceStyle,
+                        color:
+                          activeCategory === 'Ігри' ? '#7FE0FF' : itemPriceStyle.color,
+                      }}
+                    >
+                      {item.price}
+                    </span>
                   </div>
                   {item.description && (
                     <div style={itemSubRowStyle}>
-                      <span style={itemDescStyle}>{item.description}</span>
+                      <span
+                        style={{
+                          ...itemDescStyle,
+                          color:
+                            activeCategory === 'Ігри'
+                              ? '#B2F7FF'
+                              : itemDescStyle.color,
+                        }}
+                      >
+                        {item.description}
+                      </span>
                     </div>
                   )}
                 </div>
@@ -51,11 +76,17 @@ const Menu: React.FC = () => {
               onClick={() => setActiveCategory(cat)}
               style={{
                 ...tabButtonStyle,
-                color: activeCategory === cat ? '#D4AF37' : 'rgba(255, 255, 255, 0.5)',
+                color:
+                  activeCategory === cat
+                    ? cat === 'Ігри'
+                      ? '#7FE0FF'
+                      : '#D4AF37'
+                    : 'rgba(255, 255, 255, 0.5)',
                 borderBottom:
                   activeCategory === cat
-                    ? '1px solid #D4AF37'
+                    ? `1px solid ${cat === 'Ігри' ? '#7FE0FF' : '#D4AF37'}`
                     : '1px solid transparent',
+                fontWeight: activeCategory === cat ? 600 : 400,
               }}
             >
               {cat}
@@ -188,3 +219,4 @@ const itemDescStyle: React.CSSProperties = {
 
 
 export default Menu;
+
