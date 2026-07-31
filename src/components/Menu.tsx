@@ -230,33 +230,33 @@ const itemDescStyle: React.CSSProperties = {
 const gameIntroContainerStyle: React.CSSProperties = {
   marginBottom: '30px',
   padding: '30px 25px',
-  background: 'rgba(50, 12, 15, 0.85)',
-  border: '1px solid rgba(172, 45, 66, 0.18)',
+  background: '#060404',
+  border: '1px solid rgba(160, 44, 61, 0.18)',
   borderRadius: '20px',
 };
 
 const gameIntroStyle: React.CSSProperties = {
   margin: 0,
-  color: '#E3B3B8',
+  color: '#E8D0D3',
   fontSize: '1.05rem',
   lineHeight: 1.8,
   letterSpacing: '1px',
 };
 
 const gameGridStyle: React.CSSProperties = {
-  background: 'radial-gradient(circle at top left, rgba(172, 45, 66, 0.12), transparent 35%), radial-gradient(circle at bottom right, rgba(172, 45, 66, 0.08), transparent 30%)',
+  background: '#050505',
   padding: '30px',
   borderRadius: '30px',
-  border: '1px solid rgba(172, 45, 66, 0.1)',
+  border: '1px solid rgba(160, 44, 61, 0.16)',
 };
 
 const gameCategorySectionStyle: React.CSSProperties = {
   marginBottom: '30px',
   padding: '25px',
   borderRadius: '24px',
-  backgroundColor: 'rgba(45, 12, 18, 0.8)',
-  border: '1px solid rgba(172, 45, 66, 0.12)',
-  boxShadow: '0 10px 40px rgba(76, 14, 26, 0.25)',
+  backgroundColor: '#090505',
+  border: '1px solid rgba(160, 44, 61, 0.16)',
+  boxShadow: '0 10px 40px rgba(0, 0, 0, 0.35)',
 };
 
 const gameMenuItemStyle: React.CSSProperties = {
@@ -265,8 +265,8 @@ const gameMenuItemStyle: React.CSSProperties = {
   gap: '10px',
   padding: '18px 18px 12px',
   borderRadius: '18px',
-  backgroundColor: 'rgba(45, 10, 18, 0.95)',
-  border: '1px solid rgba(172, 45, 66, 0.08)',
+  backgroundColor: '#070505',
+  border: '1px solid rgba(160, 44, 61, 0.08)',
 };
 
 const gameItemNameStyle: React.CSSProperties = {
