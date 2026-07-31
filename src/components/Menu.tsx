@@ -5,63 +5,69 @@ import type { MenuCategory } from '../menuData';
 const Menu: React.FC = () => {
   const categories = ['Їжа', 'Кальяни', 'Бар', 'Ігри'];
   const [activeCategory, setActiveCategory] = useState('Їжа');
+  const isGameTab = activeCategory === 'Ігри';
 
   const renderContent = () => {
     const data = menuData[activeCategory] as MenuCategory[];
 
     return (
-      <div style={menuGridStyle}>
-        {data.map((cat, idx) => (
-          <div key={idx} style={categorySectionStyle}>
-            <h3
-              style={{
-                ...categoryTitleStyle,
-                color: activeCategory === 'Ігри' ? '#7FE0FF' : categoryTitleStyle.color,
-              }}
-            >
-              {cat.title}
-            </h3>
-            <div style={itemsListStyle}>
-              {cat.items.map((item, i) => (
-                <div key={i} style={menuItemStyle}>
-                  <div style={itemMainRowStyle}>
-                    <span style={itemNameStyle}>{item.name}</span>
-                    {item.price ? (
-                      <>
-                        <div style={itemConnectorStyle}></div>
+      <>
+        {isGameTab && (
+          <div style={gameIntroContainerStyle}>
+            <p style={gameIntroStyle}>
+              Вечір ігор у Noir Lounge — це атмосфера інтриг, стратегій і веселощів. Оберіть гру, зберіть компанію та дозвольте вечору стати незабутнім.
+            </p>
+          </div>
+        )}
+        <div style={{ ...menuGridStyle, ...(isGameTab ? gameGridStyle : {}) }}>
+          {data.map((cat, idx) => (
+            <div key={idx} style={{ ...categorySectionStyle, ...(isGameTab ? gameCategorySectionStyle : {}) }}>
+              <h3
+                style={{
+                  ...categoryTitleStyle,
+                  color: isGameTab ? '#7FE0FF' : categoryTitleStyle.color,
+                }}
+              >
+                {cat.title}
+              </h3>
+              <div style={itemsListStyle}>
+                {cat.items.map((item, i) => (
+                  <div key={i} style={{ ...menuItemStyle, ...(isGameTab ? gameMenuItemStyle : {}) }}>
+                    <div style={itemMainRowStyle}>
+                      <span style={{ ...itemNameStyle, ...(isGameTab ? gameItemNameStyle : {}) }}>{item.name}</span>
+                      {item.price ? (
+                        <>
+                          <div style={{ ...itemConnectorStyle, ...(isGameTab ? gameItemConnectorStyle : {}) }}></div>
+                          <span
+                            style={{
+                              ...itemPriceStyle,
+                              color: isGameTab ? '#7FE0FF' : itemPriceStyle.color,
+                            }}
+                          >
+                            {item.price}
+                          </span>
+                        </>
+                      ) : null}
+                    </div>
+                    {item.description && (
+                      <div style={itemSubRowStyle}>
                         <span
                           style={{
-                            ...itemPriceStyle,
-                            color:
-                              activeCategory === 'Ігри' ? '#7FE0FF' : itemPriceStyle.color,
+                            ...itemDescStyle,
+                            color: isGameTab ? '#B2F7FF' : itemDescStyle.color,
                           }}
                         >
-                          {item.price}
+                          {item.description}
                         </span>
-                      </>
-                    ) : null}
+                      </div>
+                    )}
                   </div>
-                  {item.description && (
-                    <div style={itemSubRowStyle}>
-                      <span
-                        style={{
-                          ...itemDescStyle,
-                          color:
-                            activeCategory === 'Ігри'
-                              ? '#B2F7FF'
-                              : itemDescStyle.color,
-                        }}
-                      >
-                        {item.description}
-                      </span>
-                    </div>
-                  )}
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </>
     );
   };
 
@@ -221,5 +227,59 @@ const itemDescStyle: React.CSSProperties = {
   textTransform: 'lowercase',
 };
 
+const gameIntroContainerStyle: React.CSSProperties = {
+  marginBottom: '30px',
+  padding: '30px 25px',
+  background: 'rgba(10, 29, 50, 0.75)',
+  border: '1px solid rgba(126, 224, 255, 0.18)',
+  borderRadius: '20px',
+};
+
+const gameIntroStyle: React.CSSProperties = {
+  margin: 0,
+  color: '#CDE9FF',
+  fontSize: '1.05rem',
+  lineHeight: 1.8,
+  letterSpacing: '1px',
+};
+
+const gameGridStyle: React.CSSProperties = {
+  background: 'radial-gradient(circle at top left, rgba(126, 224, 255, 0.08), transparent 35%), radial-gradient(circle at bottom right, rgba(126, 224, 255, 0.06), transparent 30%)',
+  padding: '30px',
+  borderRadius: '30px',
+  border: '1px solid rgba(126, 224, 255, 0.1)',
+};
+
+const gameCategorySectionStyle: React.CSSProperties = {
+  marginBottom: '30px',
+  padding: '25px',
+  borderRadius: '24px',
+  backgroundColor: 'rgba(4, 20, 38, 0.85)',
+  border: '1px solid rgba(126, 224, 255, 0.12)',
+  boxShadow: '0 10px 40px rgba(10, 40, 75, 0.2)',
+};
+
+const gameMenuItemStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '10px',
+  padding: '18px 18px 12px',
+  borderRadius: '18px',
+  backgroundColor: 'rgba(6, 18, 32, 0.95)',
+  border: '1px solid rgba(126, 224, 255, 0.08)',
+};
+
+const gameItemNameStyle: React.CSSProperties = {
+  fontSize: '1.05rem',
+  letterSpacing: '3px',
+  color: '#E7F7FF',
+};
+
+const gameItemConnectorStyle: React.CSSProperties = {
+  flex: 1,
+  borderBottom: '1px dotted rgba(126, 224, 255, 0.2)',
+  height: '1px',
+  marginBottom: '4px',
+};
 
 export default Menu;
