@@ -1,15 +1,13 @@
-import React from 'react';
+port React from 'react';
 
 const Gallery: React.FC = () => {
   const images = [
-    { src: '/p1.jpg', alt: 'Gallery 1' },
-    { src: '/p2.jpg', alt: 'Gallery 2' },
-    { src: '/p3.jpg', alt: 'Gallery 3' },
-    { src: '/p4.jpg', alt: 'Gallery 4' },
-    { src: '/p5.jpg', alt: 'Gallery 5' },
-    { src: '/p6.jpg', alt: 'Gallery 6' },
-    { src: '/p7.jpg', alt: 'Gallery 7' },
-    { src: '/p8.jpg', alt: 'Gallery 8' },
+    { src: '/ph1.jpg', alt: 'Gallery 1' },
+    { src: '/ph2.jpg', alt: 'Gallery 2' },
+    { src: '/ph3.jpg', alt: 'Gallery 3' },
+    { src: '/ph4.jpg', alt: 'Gallery 4' },
+    { src: '/ph5.jpg', alt: 'Gallery 5' },
+    { src: '/ph6.jpg', alt: 'Gallery 6' },
   ];
 
   return (
