@@ -25,7 +25,7 @@ const Menu: React.FC = () => {
               <h3
                 style={{
                   ...categoryTitleStyle,
-                  color: isGameTab ? '#7FE0FF' : categoryTitleStyle.color,
+                  color: isGameTab ? '#A02C3D' : categoryTitleStyle.color,
                 }}
               >
                 {cat.title}
@@ -41,7 +41,7 @@ const Menu: React.FC = () => {
                           <span
                             style={{
                               ...itemPriceStyle,
-                              color: isGameTab ? '#7FE0FF' : itemPriceStyle.color,
+                              color: isGameTab ? '#A02C3D' : itemPriceStyle.color,
                             }}
                           >
                             {item.price}
@@ -54,7 +54,7 @@ const Menu: React.FC = () => {
                         <span
                           style={{
                             ...itemDescStyle,
-                            color: isGameTab ? '#B2F7FF' : itemDescStyle.color,
+                            color: isGameTab ? '#D99DA8' : itemDescStyle.color,
                           }}
                         >
                           {item.description}
@@ -89,12 +89,12 @@ const Menu: React.FC = () => {
                 color:
                   activeCategory === cat
                     ? cat === 'Ігри'
-                      ? '#7FE0FF'
+                      ? '#A02C3D'
                       : '#D4AF37'
                     : 'rgba(255, 255, 255, 0.5)',
                 borderBottom:
                   activeCategory === cat
-                    ? `1px solid ${cat === 'Ігри' ? '#7FE0FF' : '#D4AF37'}`
+                    ? `1px solid ${cat === 'Ігри' ? '#A02C3D' : '#D4AF37'}`
                     : '1px solid transparent',
                 fontWeight: activeCategory === cat ? 600 : 400,
               }}
@@ -231,23 +231,23 @@ const gameIntroContainerStyle: React.CSSProperties = {
   marginBottom: '30px',
   padding: '30px 25px',
   background: 'rgba(10, 29, 50, 0.75)',
-  border: '1px solid rgba(126, 224, 255, 0.18)',
+  border: '1px solid rgba(172, 45, 66, 0.18)',
   borderRadius: '20px',
 };
 
 const gameIntroStyle: React.CSSProperties = {
   margin: 0,
-  color: '#CDE9FF',
+  color: '#DCA3AA',
   fontSize: '1.05rem',
   lineHeight: 1.8,
   letterSpacing: '1px',
 };
 
 const gameGridStyle: React.CSSProperties = {
-  background: 'radial-gradient(circle at top left, rgba(126, 224, 255, 0.08), transparent 35%), radial-gradient(circle at bottom right, rgba(126, 224, 255, 0.06), transparent 30%)',
+  background: 'radial-gradient(circle at top left, rgba(172, 45, 66, 0.12), transparent 35%), radial-gradient(circle at bottom right, rgba(172, 45, 66, 0.08), transparent 30%)',
   padding: '30px',
   borderRadius: '30px',
-  border: '1px solid rgba(126, 224, 255, 0.1)',
+  border: '1px solid rgba(172, 45, 66, 0.1)',
 };
 
 const gameCategorySectionStyle: React.CSSProperties = {
@@ -255,8 +255,8 @@ const gameCategorySectionStyle: React.CSSProperties = {
   padding: '25px',
   borderRadius: '24px',
   backgroundColor: 'rgba(4, 20, 38, 0.85)',
-  border: '1px solid rgba(126, 224, 255, 0.12)',
-  boxShadow: '0 10px 40px rgba(10, 40, 75, 0.2)',
+  border: '1px solid rgba(172, 45, 66, 0.12)',
+  boxShadow: '0 10px 40px rgba(76, 14, 26, 0.25)',
 };
 
 const gameMenuItemStyle: React.CSSProperties = {
@@ -266,7 +266,7 @@ const gameMenuItemStyle: React.CSSProperties = {
   padding: '18px 18px 12px',
   borderRadius: '18px',
   backgroundColor: 'rgba(6, 18, 32, 0.95)',
-  border: '1px solid rgba(126, 224, 255, 0.08)',
+  border: '1px solid rgba(172, 45, 66, 0.08)',
 };
 
 const gameItemNameStyle: React.CSSProperties = {
@@ -277,7 +277,7 @@ const gameItemNameStyle: React.CSSProperties = {
 
 const gameItemConnectorStyle: React.CSSProperties = {
   flex: 1,
-  borderBottom: '1px dotted rgba(126, 224, 255, 0.2)',
+  borderBottom: '1px dotted rgba(172, 45, 66, 0.2)',
   height: '1px',
   marginBottom: '4px',
 };
