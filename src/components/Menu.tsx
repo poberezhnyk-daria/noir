@@ -230,14 +230,14 @@ const itemDescStyle: React.CSSProperties = {
 const gameIntroContainerStyle: React.CSSProperties = {
   marginBottom: '30px',
   padding: '30px 25px',
-  background: 'rgba(10, 29, 50, 0.75)',
+  background: 'rgba(50, 12, 15, 0.85)',
   border: '1px solid rgba(172, 45, 66, 0.18)',
   borderRadius: '20px',
 };
 
 const gameIntroStyle: React.CSSProperties = {
   margin: 0,
-  color: '#DCA3AA',
+  color: '#E3B3B8',
   fontSize: '1.05rem',
   lineHeight: 1.8,
   letterSpacing: '1px',
@@ -254,7 +254,7 @@ const gameCategorySectionStyle: React.CSSProperties = {
   marginBottom: '30px',
   padding: '25px',
   borderRadius: '24px',
-  backgroundColor: 'rgba(4, 20, 38, 0.85)',
+  backgroundColor: 'rgba(45, 12, 18, 0.8)',
   border: '1px solid rgba(172, 45, 66, 0.12)',
   boxShadow: '0 10px 40px rgba(76, 14, 26, 0.25)',
 };
@@ -265,14 +265,14 @@ const gameMenuItemStyle: React.CSSProperties = {
   gap: '10px',
   padding: '18px 18px 12px',
   borderRadius: '18px',
-  backgroundColor: 'rgba(6, 18, 32, 0.95)',
+  backgroundColor: 'rgba(45, 10, 18, 0.95)',
   border: '1px solid rgba(172, 45, 66, 0.08)',
 };
 
 const gameItemNameStyle: React.CSSProperties = {
   fontSize: '1.05rem',
   letterSpacing: '3px',
-  color: '#E7F7FF',
+  color: '#F0D1D5',
 };
 
 const gameItemConnectorStyle: React.CSSProperties = {
