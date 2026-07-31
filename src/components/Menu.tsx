@@ -26,16 +26,20 @@ const Menu: React.FC = () => {
                 <div key={i} style={menuItemStyle}>
                   <div style={itemMainRowStyle}>
                     <span style={itemNameStyle}>{item.name}</span>
-                    <div style={itemConnectorStyle}></div>
-                    <span
-                      style={{
-                        ...itemPriceStyle,
-                        color:
-                          activeCategory === 'Ігри' ? '#7FE0FF' : itemPriceStyle.color,
-                      }}
-                    >
-                      {item.price}
-                    </span>
+                    {item.price ? (
+                      <>
+                        <div style={itemConnectorStyle}></div>
+                        <span
+                          style={{
+                            ...itemPriceStyle,
+                            color:
+                              activeCategory === 'Ігри' ? '#7FE0FF' : itemPriceStyle.color,
+                          }}
+                        >
+                          {item.price}
+                        </span>
+                      </>
+                    ) : null}
                   </div>
                   {item.description && (
                     <div style={itemSubRowStyle}>
@@ -219,4 +223,3 @@ const itemDescStyle: React.CSSProperties = {
 
 
 export default Menu;
-
