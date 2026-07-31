@@ -1,23 +1,31 @@
-port React from 'react';
+import React from 'react';
 
 const Gallery: React.FC = () => {
   const images = [
-    { src: '/p1.jpg', alt: 'Gallery 1' },
-    { src: '/p2.jpg', alt: 'Gallery 2' },
-    { src: '/p3.jpg', alt: 'Gallery 3' },
-    { src: '/p4.jpg', alt: 'Gallery 4' },
-    { src: '/p5.jpg', alt: 'Gallery 5' },
-    { src: '/p6.jpg', alt: 'Gallery 6' },
+    { src: '/p1.jpg', title: 'Атмосфера' },
+    { src: '/p2.jpg', title: 'Інтер\'єр' },
+    { src: '/p3.jpg', title: 'Затишок' },
+    { src: '/p4.jpg', title: 'Деталі' },
+    { src: '/p5.jpg', title: 'Бар' },
+    { src: '/p6.jpg', title: 'Вечір' },
   ];
 
   return (
     <section id="gallery" style={sectionStyle}>
       <div className="container" style={containerStyle}>
         <h2 style={titleStyle}>Галерея</h2>
-        <div style={gridStyle}>
+
+        <style>{`
+          .gallery-item:hover img { transform: scale(1.1); }
+          .gallery-item:hover .overlay { opacity: 1; }
+        `}</style>
+        <div style={masonryGridStyle}>
           {images.map((img, index) => (
-            <div key={index} style={imageContainerStyle}>
-              <img src={img.src} alt={img.alt} style={imageStyle} />
+            <div key={index} style={imageWrapperStyle} className="gallery-item">
+              <img src={img.src} alt={img.title} style={imageStyle} />
+              <div style={overlayStyle} className="overlay">
+                <span style={overlayTextStyle}>{img.title}</span>
+              </div>
             </div>
           ))}
         </div>
@@ -48,22 +56,48 @@ const titleStyle: React.CSSProperties = {
   color: '#D4AF37',
 };
 
-const gridStyle: React.CSSProperties = {
+const masonryGridStyle: React.CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-  gap: '20px',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+  gridAutoRows: '300px',
+  gridAutoFlow: 'dense',
+  gap: '15px',
 };
 
-const imageContainerStyle: React.CSSProperties = {
+const imageWrapperStyle: React.CSSProperties = {
+  position: 'relative',
   overflow: 'hidden',
-  borderRadius: '4px',
+  borderRadius: '8px',
+  cursor: 'pointer',
 };
 
 const imageStyle: React.CSSProperties = {
   width: '100%',
-  height: '300px',
+  height: '100%',
   objectFit: 'cover',
-  transition: 'transform 0.5s ease',
+  transition: 'transform 0.6s cubic-bezier(0.25, 0.45, 0.45, 0.95)',
+};
+
+const overlayStyle: React.CSSProperties = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'rgba(0, 0, 0, 0.4)',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  opacity: 0,
+  transition: 'opacity 0.4s ease',
+};
+
+const overlayTextStyle: React.CSSProperties = {
+  color: '#D4AF37',
+  fontSize: '1.2rem',
+  letterSpacing: '3px',
+  textTransform: 'uppercase',
+  fontWeight: '300',
 };
 
 export default Gallery;
