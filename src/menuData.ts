@@ -2,7 +2,7 @@ export interface MenuItem {
   name: string;
   weight?: string;
   description?: string;
-  price: string;
+  price?: string;
 }
 
 export interface MenuCategory {
@@ -124,7 +124,7 @@ export const menuData: MenuData = {
           weight: '220 г', 
           price: '185 грн' 
         },
-         { 
+        { 
           name: 'Креветки гриль', 
           weight: '100 г', 
           price: '150 грн' 
@@ -446,32 +446,26 @@ export const menuData: MenuData = {
         {
           name: 'МАФІЯ',
           description: 'Інтриги, підозри та нічні голосування для компаній від 6 осіб.',
-          price: 'безкоштовно'
         },
         {
           name: 'НОРМ АБО СТРЕМ',
           description: 'Захоплива гра з вибором, що коштує уваги, а що викликає страх.',
-          price: 'безкоштовно'
         },
         {
           name: 'РЕД ФЛАГ',
           description: 'Гуморні питання, що розкривають характер та створюють веселу атмосферу.',
-          price: 'безкоштовно'
         },
         {
           name: 'КАРТИ',
           description: 'Класичні колоди для дурня, покеру та інших улюблених розваг.',
-          price: 'безкоштовно'
         },
         {
           name: 'ШАХИ',
           description: 'Класична інтелектуальна дуель для тих, хто любить стратегічні виклики.',
-          price: 'безкоштовно'
         },
         {
           name: 'ШАШКИ',
           description: 'Плавні ходи та гострі перемоги на вишуканому ігровому полі.',
-          price: 'безкоштовно'
         }
       ]
     }
