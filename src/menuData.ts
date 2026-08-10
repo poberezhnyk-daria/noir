@@ -158,6 +158,7 @@ export const menuData: MenuData = {
           name: 'Сердечка в соєвому соусі', 
           description: 'Сердечка, соєвий соус, мед, ерош пішта', 
           price: '180 грн' 
+          image: ''
         },
       ]
     },
