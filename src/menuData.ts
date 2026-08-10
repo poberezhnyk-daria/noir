@@ -31,6 +31,12 @@ export const menuData: MenuData = {
           weight: '320 г', 
           price: '355 грн' 
         },
+        { 
+          name: 'Салат Цезар з тунцем', 
+          description: '',
+          weight: '', 
+          price: '' 
+        },
       ]
     },
     {
