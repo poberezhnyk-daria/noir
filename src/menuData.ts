@@ -160,6 +160,12 @@ export const menuData: MenuData = {
           price: '180 грн' 
           image: ''
         },
+        { 
+          name: 'Сердечка фрі', 
+          description: 'Сердечка, яйця, мука, сухарі, соус кетчуп, соус медово - гірчичний', 
+          price: '180 грн' 
+          image: ''
+        }
       ]
     },
     {
