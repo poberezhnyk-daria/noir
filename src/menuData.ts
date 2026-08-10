@@ -35,9 +35,8 @@ export const menuData: MenuData = {
           image: '/jezar-lococ.PNG'
         },
         { 
-          name: 'Салат Цезар з тунцем', 
-          description: '',
-          price: '250' 
+          name: 'Салат Цезар з тунцем',
+          price: '250 грн' 
         },
       ]
     },
