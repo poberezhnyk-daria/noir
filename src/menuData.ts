@@ -23,13 +23,15 @@ export const menuData: MenuData = {
           name: 'Салат Цезар з куркою', 
           description: 'Салат Ромен, куряче стегно гриль, пармезан, томати чері, грінки, соус Цезар',
           weight: '320 г', 
-          price: '255 грн' 
+          price: '255 грн',
+          image: 'public/jezar-kyrka.PNG'
         },
         { 
           name: 'Салат Цезар з лососем', 
           description: 'Лосось, крем-сир, мікс салатів, соус Цезар, томати чері, грінки, пармезан',
           weight: '320 г', 
-          price: '355 грн' 
+          price: '355 грн',
+          image: 'public/jezar-lococ.PNG'
         },
         { 
           name: 'Салат Цезар з тунцем', 
@@ -46,7 +48,8 @@ export const menuData: MenuData = {
           name: 'Бургер Біф', 
           description: 'Булка бріош, яловича котлета, сир, фірмовий соус, томати, салат Ромен',
           weight: '450 г', 
-          price: '320 грн' 
+          price: '320 грн',
+          image: '‎public/burg-yalov.JPG'
         },
         { 
           name: 'Бургер з куркою', 
@@ -98,7 +101,8 @@ export const menuData: MenuData = {
         { 
           name: 'Креветки гриль', 
           weight: '100 г', 
-          price: '250 грн' 
+          price: '250 грн',
+          image: 'public/krevetki.JPG'
         },
         { 
           name: 'Кільця кальмара', 
@@ -121,7 +125,8 @@ export const menuData: MenuData = {
           name: 'Тартар з лосося', 
           description: 'Лосось, авокадо, зелена цибуля, лимонний фреш, сіль, перець',
           weight: '180 г', 
-          price: '365 грн' 
+          price: '365 грн',
+          image: 'public/tartar-lococ.PNG'
         },
         { 
           name: 'Тартар з тунця', 
@@ -163,29 +168,32 @@ export const menuData: MenuData = {
         { 
           name: 'Сердечка в соєвому соусі', 
           description: 'Сердечка, соєвий соус, мед, ерош пішта', 
-          price: '180 грн' 
-          image: ''
+          price: '180 грн', 
+          image: 'public/serdechka.JPG'
         },
         { 
           name: 'Сердечка фрі', 
           description: 'Сердечка, яйця, мука, сухарі, соус кетчуп, соус медово - гірчичний', 
-          price: '180 грн' 
-          image: ''
+          price: '180 грн',
+          image: 'public/serd-fri.JPG'
         },
         { 
           name: 'Фетучіні з куркою', 
           description: 'Паста, курка, чері, пармезан, вершки, мікрогрін', 
-          price: '250 грн' 
+          price: '250 грн',
+          image: 'public/fetychunu.JPG'
         },
         { 
           name: 'Паста карбонара', 
           description: 'Бекон, чеснок, вершки, паста, пармезан, яйця', 
-          price: '200 грн' 
+          price: '200 грн',
+          image: 'public/karbonara.JPG'
         },
         { 
           name: 'Паста з лососем', 
           description: 'Лосось, вершки, лимонний сок, масло, пармезан, чері, мікрогрін', 
-          price: '270 грн' 
+          price: '270 грн',
+          image: 'public/lococ.JPG'
         }
       ]
     },
@@ -196,13 +204,15 @@ export const menuData: MenuData = {
           name: 'Сирна дошка', 
           description: 'Сир Шавре, пармезан, Брі, трюфельний мед, свіжі ягоди, печиво',
           weight: '350 г', 
-          price: '565 грн' 
+          price: '565 грн',
+          image: 'public/curna-dochka.PNG'
         },
         { 
           name: 'М’ясна дошка', 
           description: 'Прошуто, два види салямі, сир Шавре, Брі, оливки, томати чері, рукола',
           weight: '300 г', 
-          price: '495 грн' 
+          price: '495 грн',
+          image: 'public/myasna-doshka.JPG'
         },
         { 
           name: 'Пивна дошка XXL', 
@@ -214,7 +224,8 @@ export const menuData: MenuData = {
           name: 'Пивна дошка XL', 
           description: 'Картопля фрі, нагетси, цибулеві кільця, сир косичка, часникові грінки, соус айолі', 
           weight: '750 г', 
-          price: '325 грн' 
+          price: '325 грн',
+          image: 'public/pivnaxl.JPG'
         },
       ]
     },
@@ -236,13 +247,14 @@ export const menuData: MenuData = {
         { 
           name: 'Наполеон',
           weight: '180 г', 
-          price: '135 грн' 
+          price: '135 грн',
+          image: 'public/napoleon.PNG'
         },
          { 
           name: 'Чізкейк снікерс',
           weight: '180 г', 
           price: '145 грн',
-          image: ''
+          image: 'public/xizkeqk.PNG'
         },
       ]
     }
