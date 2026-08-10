@@ -37,8 +37,7 @@ export const menuData: MenuData = {
         { 
           name: 'Салат Цезар з тунцем', 
           description: '',
-          weight: '', 
-          price: '' 
+          price: '250' 
         },
       ]
     },
@@ -137,6 +136,18 @@ export const menuData: MenuData = {
           price: '375 грн' 
         },
         { 
+          name: 'Гуакамоле', 
+          description: 'Авокадо, помідор, чілі, лайм, червона цибуля, дорітос',
+          price: '220 грн',
+          image: '/guakamole.jpg'
+        },
+        { 
+          name: 'Карпачо з помідорами', 
+          description: 'Помідор червоний, помідор жовтий, рукола, пармезан, цезарь, м'ята, лайм, бальзамічний оцет',
+          price: '1855 грн',
+          image: '/carpacho.jpg'
+        },
+        { 
           name: 'Брускети (порція 2 шт)', 
           description: 'Хрустка чіабата, крем-сир, рукола, оливкова олія',
           weight: '180 г', 
@@ -166,6 +177,12 @@ export const menuData: MenuData = {
           description: 'Телятина гриль, соус барбекю, рукола, томати чері',
           weight: '350 г', 
           price: '395 грн' 
+        },
+        { 
+          name: 'Рібай', 
+          description: 'Стейк, розмарин, часник, лимон, свіжий чілі', 
+          price: '300 грн - 100 г', 
+          image: '/ribaq.png'
         },
         { 
           name: 'Сердечка в соєвому соусі', 
