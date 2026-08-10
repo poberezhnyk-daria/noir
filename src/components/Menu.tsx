@@ -32,35 +32,53 @@ const Menu: React.FC = () => {
               </h3>
               <div style={itemsListStyle}>
                 {cat.items.map((item, i) => (
-                  <div key={i} style={{ ...menuItemStyle, ...(isGameTab ? gameMenuItemStyle : {}) }}>
-                    <div style={itemMainRowStyle}>
-                      <span style={{ ...itemNameStyle, ...(isGameTab ? gameItemNameStyle : {}) }}>{item.name}</span>
-                      {item.price ? (
-                        <>
-                          <div style={{ ...itemConnectorStyle, ...(isGameTab ? gameItemConnectorStyle : {}) }}></div>
+                  <div
+                    key={i}
+                    className={`menu-item-container ${isGameTab ? 'game-item-container' : ''}`}
+                    style={{ ...menuItemStyle, ...(isGameTab ? gameMenuItemStyle : {}) }}
+                  >
+                    {item.image && (
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="menu-item-img"
+                        style={{ ...itemImageStyle, ...(isGameTab ? gameItemImageStyle : {}) }}
+                        loading="lazy"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                    )}
+                    <div style={itemTextContainerStyle}>
+                      <div style={itemMainRowStyle}>
+                        <span style={{ ...itemNameStyle, ...(isGameTab ? gameItemNameStyle : {}) }}>{item.name}</span>
+                        {item.price ? (
+                          <>
+                            <div style={{ ...itemConnectorStyle, ...(isGameTab ? gameItemConnectorStyle : {}) }}></div>
+                            <span
+                              style={{
+                                ...itemPriceStyle,
+                                color: isGameTab ? '#A02C3D' : itemPriceStyle.color,
+                              }}
+                            >
+                                {item.price}
+                            </span>
+                          </>
+                        ) : null}
+                      </div>
+                      {item.description && (
+                        <div style={itemSubRowStyle}>
                           <span
                             style={{
-                              ...itemPriceStyle,
-                              color: isGameTab ? '#A02C3D' : itemPriceStyle.color,
+                              ...itemDescStyle,
+                              color: isGameTab ? '#D99DA8' : itemDescStyle.color,
                             }}
                           >
-                            {item.price}
+                            {item.description}
                           </span>
-                        </>
-                      ) : null}
+                        </div>
+                      )}
                     </div>
-                    {item.description && (
-                      <div style={itemSubRowStyle}>
-                        <span
-                          style={{
-                            ...itemDescStyle,
-                            color: isGameTab ? '#D99DA8' : itemDescStyle.color,
-                          }}
-                        >
-                          {item.description}
-                        </span>
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>
@@ -73,6 +91,32 @@ const Menu: React.FC = () => {
 
   return (
     <section id="menu" style={sectionStyle}>
+      <style>{`
+        .menu-item-container {
+          transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .menu-item-img {
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-item-container:hover .menu-item-img {
+          transform: scale(1.08);
+          border-color: rgba(212, 175, 55, 0.7) !important;
+          box-shadow: 0 6px 16px rgba(212, 175, 55, 0.25);
+        }
+        .game-item-container:hover .menu-item-img {
+          border-color: rgba(160, 44, 61, 0.7) !important;
+          box-shadow: 0 6px 16px rgba(160, 44, 61, 0.25);
+        }
+        @media (max-width: 576px) {
+          .menu-item-container {
+            gap: 12px !important;
+          }
+          .menu-item-img {
+            width: 65px !important;
+            height: 65px !important;
+          }
+        }
+      `}</style>
       <div
         className="container"
         style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 20px' }}
@@ -179,8 +223,31 @@ const itemsListStyle: React.CSSProperties = {
 
 const menuItemStyle: React.CSSProperties = {
   display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  gap: '16px',
+};
+
+const itemTextContainerStyle: React.CSSProperties = {
+  flex: 1,
+  display: 'flex',
   flexDirection: 'column',
   gap: '6px',
+};
+
+const itemImageStyle: React.CSSProperties = {
+  width: '75px',
+  height: '75px',
+  objectFit: 'cover',
+  borderRadius: '12px',
+  border: '1px solid rgba(212, 175, 55, 0.3)',
+  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
+  flexShrink: 0,
+};
+
+const gameItemImageStyle: React.CSSProperties = {
+  border: '1px solid rgba(160, 44, 61, 0.4)',
+  boxShadow: '0 4px 12px rgba(160, 44, 61, 0.15)',
 };
 
 const itemMainRowStyle: React.CSSProperties = {
@@ -196,7 +263,7 @@ const itemNameStyle: React.CSSProperties = {
   color: '#FFFFFF',
   letterSpacing: '2px',
   fontWeight: '400',
-  whiteSpace: 'nowrap',
+  whiteSpace: 'normal',
 };
 
 const itemConnectorStyle: React.CSSProperties = {
@@ -261,8 +328,9 @@ const gameCategorySectionStyle: React.CSSProperties = {
 
 const gameMenuItemStyle: React.CSSProperties = {
   display: 'flex',
-  flexDirection: 'column',
-  gap: '10px',
+  flexDirection: 'row',
+  alignItems: 'center',
+  gap: '16px',
   padding: '18px 18px 12px',
   borderRadius: '18px',
   backgroundColor: '#070505',
