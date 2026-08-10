@@ -241,7 +241,8 @@ export const menuData: MenuData = {
          { 
           name: 'Чізкейк снікерс',
           weight: '180 г', 
-          price: '145 грн' 
+          price: '145 грн',
+          image: ''
         },
       ]
     }
