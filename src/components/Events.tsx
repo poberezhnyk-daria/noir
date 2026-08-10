@@ -13,16 +13,14 @@ const events: EventItem[] = [
   {
     title: 'STAND UP NIGHT',
     description: 'Вечір відбірного гумору та непідробних емоцій. Наші коміки розкажуть свої найкращі жарти, а затишна атмосфера Noir Lounge допоможе вам повністю розслабитись та зарядитись позитивом на весь тиждень. Тільки живий звук, тільки щирі посмішки.',
-    poster: '/events/standup-poster.jpg',
-    date: 'Щотижня',
+    poster: '/stendup.jpg',
     accentColor: '#D4AF37'
   },
   {
     title: 'MAFIA GAME',
     description: 'Легендарна психологічна гра, де маски стають реальністю. Випробуйте свою інтуїцію, логіку та акторську майстерність у боротьбі за мирне місто або станьте на бік таємничої мафії. Вечір інтриг, стратегій та незабутніх знайомств.',
-    poster: '/events/mafia-poster.jpg',
+    poster: '/mafia.JPG',',
     photos: ['/events/mafia-1.jpg', '/events/mafia-2.jpg', '/events/mafia-3.jpg'],
-    date: 'Кожну п’ятницю',
     accentColor: '#A02C3D'
   }
 ];
