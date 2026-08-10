@@ -15,7 +15,7 @@ export interface MenuData {
 }
 
 export const menuData: MenuData = {
-  'Їжа':
+  'Їжа': [
     {
       title: 'Салати',
       items: [
