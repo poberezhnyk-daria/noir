@@ -121,7 +121,7 @@ export const menuData: MenuData = {
           description: 'Телятина, каперси, зелена цибуля, яєчний жовток, соєвий соус, лимонний фреш, сіль, перець',
           weight: '180 г', 
           price: '345 грн',
-          image: ''
+          image: '/tartar-yalov.png'
         },
         { 
           name: 'Тартар з лосося', 
