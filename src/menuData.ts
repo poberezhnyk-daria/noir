@@ -154,6 +154,11 @@ export const menuData: MenuData = {
           weight: '350 г', 
           price: '395 грн' 
         },
+        { 
+          name: 'Сердечка в соєвому соусі', 
+          description: 'Сердечка, соєвий соус, мед, ерош пішта', 
+          price: '180 грн' 
+        },
       ]
     },
     {
