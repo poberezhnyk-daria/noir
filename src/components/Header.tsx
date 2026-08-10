@@ -52,6 +52,7 @@ const Header: React.FC = () => {
           <ul style={{ display: 'flex', gap: '40px', listStyle: 'none', margin: 0, padding: 0 }}>
             <li><a href="#hero" style={navLinkStyle}>ГОЛОВНА</a></li>
             <li><a href="#menu" style={navLinkStyle}>МЕНЮ</a></li>
+            <li><a href="#events" style={navLinkStyle}>ПОДІЇ</a></li>
             <li><a href="#gallery" style={navLinkStyle}>ГАЛЕРЕЯ</a></li>
             <li><a href="#booking" style={navLinkStyle}>БРОНЮВАННЯ</a></li>
             <li><a href="#reviews" style={navLinkStyle}>ВІДГУКИ</a></li>
@@ -96,6 +97,7 @@ const Header: React.FC = () => {
           <ul style={{ display: 'flex', flexDirection: 'column', gap: '40px', textAlign: 'center', listStyle: 'none', padding: 0 }}>
             <li><a href="#hero" onClick={toggleMenu} style={mobileNavLinkStyle}>ГОЛОВНА</a></li>
             <li><a href="#menu" onClick={toggleMenu} style={mobileNavLinkStyle}>МЕНЮ</a></li>
+            <li><a href="#events" onClick={toggleMenu} style={mobileNavLinkStyle}>ПОДІЇ</a></li>
             <li><a href="#gallery" onClick={toggleMenu} style={mobileNavLinkStyle}>ГАЛЕРЕЯ</a></li>
             <li><a href="#booking" onClick={toggleMenu} style={mobileNavLinkStyle}>БРОНЮВАННЯ</a></li>
             <li><a href="#reviews" onClick={toggleMenu} style={mobileNavLinkStyle}>ВІДГУКИ</a></li>
@@ -142,4 +144,3 @@ const lineStyle: React.CSSProperties = {
 };
 
 export default Header;
-
