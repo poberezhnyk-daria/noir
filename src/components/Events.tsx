@@ -20,7 +20,7 @@ const events: EventItem[] = [
     title: 'MAFIA GAME',
     description: 'Легендарна психологічна гра, де маски стають реальністю. Випробуйте свою інтуїцію, логіку та акторську майстерність у боротьбі за мирне місто або станьте на бік таємничої мафії. Вечір інтриг, стратегій та незабутніх знайомств.',
     poster: '/mafia.JPG',',
-    photos: ['/events/mafia-1.jpg', '/events/mafia-2.jpg', '/events/mafia-3.jpg'],
+    photos: ['/maf1.JPG', '/maf2.JPG', '/maf3.JPG', 'public/maf4.JPG'],
     accentColor: '#A02C3D'
   }
 ];
