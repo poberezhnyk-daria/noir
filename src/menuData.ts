@@ -3,6 +3,7 @@ export interface MenuItem {
   weight?: string;
   description?: string;
   price?: string;
+  image?: string;
 }
 
 export interface MenuCategory {
