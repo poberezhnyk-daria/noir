@@ -36,7 +36,8 @@ export const menuData: MenuData = {
         },
         { 
           name: 'Салат Цезар з тунцем',
-          price: '250 грн' 
+          price: '250 грн',
+          image: '/wezar-tynew.JPG'
         },
       ]
     },
