@@ -36,7 +36,7 @@ export const menuData: MenuData = {
         },
         { 
           name: 'Салат Цезар з тунцем',
-          price: '250 грн',
+          price: '400 грн',
           image: '/wezar-tynew.JPG'
         },
       ]
@@ -144,7 +144,7 @@ export const menuData: MenuData = {
         { 
           name: 'Карпачо з помідорами', 
           description: 'Помідор червоний, помідор жовтий, рукола, пармезан, цезарь, мята, лайм, бальзамічний оцет',
-          price: '1855 грн',
+          price: '185 грн',
           image: '/carpacho.jpg'
         },
         { 
