@@ -85,7 +85,8 @@ export const menuData: MenuData = {
           name: 'Курячі нагетси',
           description: 'Подається з соусем кетчуп',
           weight: '220 г', 
-          price: '195 грн' 
+          price: '195 грн',
+          image: '/nagetsi.PNG'
         },
         { 
           name: 'Смажені креветки', 
