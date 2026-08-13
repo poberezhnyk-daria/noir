@@ -70,11 +70,6 @@ export const menuData: MenuData = {
           price: '245 грн' 
         },
         { 
-          name: 'Веган рол', 
-          weight: '320 г', 
-          price: '220 грн' 
-        },
-        { 
           name: 'Картопля фрі', 
           description: 'Картопля фрі, подається з соусом кетчуп',
           weight: '200 г', 
