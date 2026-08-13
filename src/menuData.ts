@@ -101,7 +101,8 @@ export const menuData: MenuData = {
           name: 'Кільця кальмара', 
           description: 'Кільця кальмара у клярі, подаються з соусом тартар',
           weight: '220 г', 
-          price: '245 грн' 
+          price: '245 грн',
+          image: '/kalmar.PNG'
         },
       ]
     },
