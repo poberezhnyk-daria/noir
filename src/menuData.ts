@@ -135,7 +135,7 @@ export const menuData: MenuData = {
           name: 'Карпачо з помідорами', 
           description: 'Помідор червоний, помідор жовтий, рукола, пармезан, чеддер, мята, лайм, бальзамічний оцет',
           price: '185 грн',
-          image: '/carpacho.jpg'
+          image: '/carpacho1.jpg'
         },
         { 
           name: 'Брускети (порція 2 шт)', 
