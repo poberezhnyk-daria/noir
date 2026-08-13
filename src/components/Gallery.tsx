@@ -5,7 +5,7 @@ const Gallery: React.FC = () => {
     { src: '/p1.jpg', title: 'Атмосфера' },
     { src: '/zagalna.jpg', title: 'Атмосфера' },
     { src: '/p2.jpg', title: 'Інтер\'єр' },
-    { src: '/p3.jpg', title: 'Затишок' },
+    { src: '/zagal.JPG', title: 'Затишок' },
     { src: '/p4.jpg', title: 'Деталі' },
     { src: '/p5.jpg', title: 'Бар' },
   ];
