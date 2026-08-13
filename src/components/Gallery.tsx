@@ -3,6 +3,7 @@ import React from 'react';
 const Gallery: React.FC = () => {
   const images = [
     { src: '/p1.jpg', title: 'Атмосфера' },
+    { src: '/zagalna.jpg', title: 'Атмосфера' },
     { src: '/p2.jpg', title: 'Інтер\'єр' },
     { src: '/p3.jpg', title: 'Затишок' },
     { src: '/p4.jpg', title: 'Деталі' },
