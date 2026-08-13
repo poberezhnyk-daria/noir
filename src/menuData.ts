@@ -160,7 +160,7 @@ export const menuData: MenuData = {
           name: 'Рібай', 
           description: 'Стейк, розмарин, часник, лимон, свіжий чілі, кукурудза гриль', 
           price: '300 грн - 100 г', 
-          image: '/ribaq.png'
+          image: '/ribaq1.PNG'
         },
         { 
           name: 'Сердечка в соєвому соусі', 
