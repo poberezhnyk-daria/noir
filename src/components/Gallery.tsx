@@ -8,7 +8,6 @@ const Gallery: React.FC = () => {
     { src: '/p3.jpg', title: 'Затишок' },
     { src: '/p4.jpg', title: 'Деталі' },
     { src: '/p5.jpg', title: 'Бар' },
-    { src: '/p6.jpg', title: 'Вечір' },
   ];
 
   return (
