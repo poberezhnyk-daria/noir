@@ -74,13 +74,15 @@ export const menuData: MenuData = {
           name: 'Картопля фрі', 
           description: 'Картопля фрі, подається з соусом кетчуп',
           weight: '200 г', 
-          price: '115 грн' 
+          price: '115 грн',
+          image: '/fri.PNG'
         },
         { 
           name: 'Картопля батат', 
           description: 'Батат фрі, подається з медово-гірчичним соусом',
           weight: '200 г', 
-          price: '155 грн' 
+          price: '155 грн',
+          image: '/batat.PNG'
         },
         { 
           name: 'Курячі нагетси',
