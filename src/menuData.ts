@@ -124,7 +124,8 @@ export const menuData: MenuData = {
           name: 'Тартар з тунця', 
           description: 'Тунець, соус чілі-майо, лимонний фреш, червона цибуля, зелена цибуля, авокадо, лайм, чілі',
           weight: '180 г', 
-          price: '375 грн' 
+          price: '375 грн',
+          image: '/tartar-tynew.PNG' 
         },
         { 
           name: 'Гуакамоле', 
