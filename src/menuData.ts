@@ -176,7 +176,7 @@ export const menuData: MenuData = {
         { 
           name: 'Сердечка фрі', 
           description: 'Сердечка, соус барбекю, соус тартар, соус цезар', 
-          price: '180 грн',
+          price: '220 грн',
           image: '/serd-fri.JPG'
         },
         { 
