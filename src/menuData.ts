@@ -94,7 +94,7 @@ export const menuData: MenuData = {
         { 
           name: 'Смажені креветки', 
           weight: '100 г', 
-          price: '250 грн',
+          price: '260 грн',
           image: '/krevetki.JPG'
         },
         { 
