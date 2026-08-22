@@ -227,8 +227,7 @@ export const menuData: MenuData = {
           name: 'Пивна дошка XL', 
           description: 'Картопля фрі, нагетси, цибулеві кільця, сир косичка, часникові грінки, соус айолі', 
           weight: '750 г', 
-          price: '325 грн',
-          image: '/pivnaxl.JPG'
+          price: '400 грн'
         },
       ]
     },
@@ -287,6 +286,14 @@ export const menuData: MenuData = {
           description: 'золотий ром, кокосовий лікер, вершки, ананасове пюре, ананасовий сік', 
           price: '260 грн',
           image: '/pina.PNG' 
+        },
+        { 
+          name: 'Negroni', 
+          price: '270 грн'
+        },
+        { 
+          name: 'Margarita', 
+          price: '270 грн'
         },
       ]
     },
@@ -433,7 +440,7 @@ export const menuData: MenuData = {
     {
       title: 'КАЛЬЯНИ',
       items: [
-        { name: 'Light', price: '350 грн' },
+        { name: 'Light', price: '400 грн' },
         { name: 'Premium', price: '450 грн' },
         { name: 'Hard', price: '500 грн' },
       ]
