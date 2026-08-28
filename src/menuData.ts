@@ -143,7 +143,7 @@ export const menuData: MenuData = {
         { 
           name: 'Тірамісу', 
           price: '170 грн',
-          image: '/xizkeqk.PNG'
+          image: '/tiramisy.jpg'
         },
         { 
           name: 'Наполеон',
@@ -160,22 +160,22 @@ export const menuData: MenuData = {
         { 
           name: 'Тістечко Малина (корпусне)', 
           price: '180 грн',
-          image: '/xizkeqk.PNG'
+          image: '/malina.jpg'
         },
         { 
           name: 'Тістечко Лохина (корпусне)', 
           price: '190 грн',
-          image: '/xizkeqk.PNG'
+          image: '/loxina.jpg'
         },
         { 
           name: 'Карибський дотик', 
           price: '160 грн',
-          image: '/xizkeqk.PNG'
+          image: '/caribi.jpg'
         },
         { 
           name: 'Кокон', 
           price: '160 грн',
-          image: '/xizkeqk.PNG'
+          image: '/kokon.jpg'
         },
       ]
     }
