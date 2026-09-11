@@ -160,32 +160,37 @@ export const menuData: MenuData = {
         { 
           name: 'Тістечко Малина (корпусне)', 
           price: '265 грн',
-          image: '/malina.jpg'
+          image: '/malina.JPG'
         },
         { 
           name: 'Тістечко Лохина (корпусне)', 
           price: '260 грн',
-          image: '/loxina.jpg'
+          image: '/lohina.JPG'
         },
         { 
           name: 'Тістечко Полуниця (корпусне)', 
-          price: '265 грн'
+          price: '265 грн',
+          image: '/polyniza.JPG'
         },
         { 
           name: 'Тістечко Кокос (корпусне)', 
-          price: '280 грн'
+          price: '280 грн',
+          image: '/kokos.JPG'
         },
         { 
           name: 'Тістечко Банан (корпусне)', 
-          price: '270 грн'
+          price: '270 грн',
+          image: '/banan.JPG'
         },
         { 
           name: 'Тістечко Фісташка (корпусне)', 
-          price: '280 грн'
+          price: '280 грн',
+          image: '/fistashka.JPG'
         },
         { 
           name: 'Тістечко Кава (корпусне)', 
-          price: '265 грн'
+          price: '265 грн',
+          image: '/kava.JPG'
         },
         { 
           name: 'Карибський дотик', 
