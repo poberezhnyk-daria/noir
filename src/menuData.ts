@@ -59,8 +59,7 @@ export const menuData: MenuData = {
         },
         { 
           name: 'Бургер Тунець',  
-          price: '520 грн',
-          image: '/jezar-kyrka.PNG'
+          price: '520 грн'
         },
       ]
     },
