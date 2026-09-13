@@ -30,21 +30,42 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'БУРГЕРИ ТА РОЛИ',
+      title: 'Основні страви',
       items: [
         { 
-          name: 'Бургер Біф', 
-          description: 'Булка, яловича котлета, сир, фірмовий соус, томати, салат Ромен, червона цибуля',
-          weight: '450 г', 
-          price: '320 грн',
-          image: '/burg-yalov.JPG'
+          name: 'Baby Бургер',  
+          price: '300 грн',
+          image: '/jezar-kyrka.PNG'
         },
         { 
-          name: 'Бургер з куркою', 
-          description: 'Куряче стегно гриль, булка, фірмовий соус, томати, салат Ромен, подається з картоплею фрі та соусом айолі',
-          weight: '420 г', 
-          price: '285 грн' 
+          name: 'Біф Бургер',  
+          price: '520 грн',
+          image: '/jezar-kyrka.PNG'
         },
+        { 
+          name: 'Double Бургер',  
+          price: '520 грн',
+          image: '/jezar-kyrka.PNG'
+        },
+        { 
+          name: 'Бургер Лосось',  
+          price: '520 грн',
+          image: '/jezar-kyrka.PNG'
+        },
+        { 
+          name: 'Chicken Бургер',  
+          price: '420 грн',
+          image: '/jezar-kyrka.PNG'
+        },
+        { 
+          name: 'Бургер Тунець',  
+          price: '520 грн',
+          image: '/jezar-kyrka.PNG'
+        },
+      ]
+    },
+    { title: 'ЗАКУСКИ',
+      items: [
         { 
           name: 'Рол з куркою', 
           description: 'Пшеничний лаваш, куряче стегно гриль, айсберг, томати, фірмовий соус',
@@ -86,11 +107,6 @@ export const menuData: MenuData = {
           price: '245 грн',
           image: '/kalmar.PNG'
         },
-      ]
-    },
-    {
-      title: 'Основні страви',
-      items: [
         { 
           name: 'Сердечка в соєвому соусі', 
           description: 'Сердечка, соєвий соус, мед, ерош пішта, кунжут', 
