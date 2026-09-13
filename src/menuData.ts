@@ -35,27 +35,27 @@ export const menuData: MenuData = {
         { 
           name: 'Baby Бургер',  
           price: '300 грн',
-          image: '/jezar-kyrka.PNG'
+          image: '/baby.PNG'
         },
         { 
           name: 'Біф Бургер',  
           price: '520 грн',
-          image: '/jezar-kyrka.PNG'
+          image: '/bif.PNG'
         },
         { 
           name: 'Double Бургер',  
           price: '520 грн',
-          image: '/jezar-kyrka.PNG'
+          image: '/double.PNG'
         },
         { 
           name: 'Бургер Лосось',  
           price: '520 грн',
-          image: '/jezar-kyrka.PNG'
+          image: '/lococburger.PNG'
         },
         { 
           name: 'Chicken Бургер',  
           price: '420 грн',
-          image: '/jezar-kyrka.PNG'
+          image: '/chiken.PNG'
         },
         { 
           name: 'Бургер Тунець',  
@@ -64,7 +64,7 @@ export const menuData: MenuData = {
         },
       ]
     },
-    { title: 'ЗАКУСКИ',
+    { title: 'Закуски',
       items: [
         { 
           name: 'Рол з куркою', 
@@ -122,7 +122,7 @@ export const menuData: MenuData = {
       ]
     },
     {
-      title: 'нарізки та плато',
+      title: 'Нарізки та плато',
       items: [
         { 
           name: 'Сирна дошка', 
@@ -149,12 +149,13 @@ export const menuData: MenuData = {
           name: 'Пивна дошка XL', 
           description: 'Картопля фрі, нагетси, цибулеві кільця, сир косичка, часникові грінки, соус айолі', 
           weight: '750 г', 
-          price: '400 грн'
+          price: '400 грн',
+          image: '/pivnaxl.PNG'
         },
       ]
     },
     {
-      title: 'десерти',
+      title: 'Десерти',
       items: [
         { 
           name: 'Тірамісу', 
