@@ -3,8 +3,8 @@ import { menuData } from '../menuData';
 import type { MenuCategory } from '../menuData';
 
 const Menu: React.FC = () => {
-  const categories = ['Їжа', 'Кальяни', 'Бар', 'Ігри'];
-  const [activeCategory, setActiveCategory] = useState('Їжа');
+  const categories = ['Бар', 'Ігри'];
+  const [activeCategory, setActiveCategory] = useState('Бар');
   const isGameTab = activeCategory === 'Ігри';
 
   const renderContent = () => {
@@ -19,9 +19,21 @@ const Menu: React.FC = () => {
             </p>
           </div>
         )}
-        <div style={{ ...menuGridStyle, ...(isGameTab ? gameGridStyle : {}) }}>
+
+        <div
+          style={{
+            ...menuGridStyle,
+            ...(isGameTab ? gameGridStyle : {}),
+          }}
+        >
           {data.map((cat, idx) => (
-            <div key={idx} style={{ ...categorySectionStyle, ...(isGameTab ? gameCategorySectionStyle : {}) }}>
+            <div
+              key={idx}
+              style={{
+                ...categorySectionStyle,
+                ...(isGameTab ? gameCategorySectionStyle : {}),
+              }}
+            >
               <h3
                 style={{
                   ...categoryTitleStyle,
@@ -30,48 +42,79 @@ const Menu: React.FC = () => {
               >
                 {cat.title}
               </h3>
+
               <div style={itemsListStyle}>
                 {cat.items.map((item, i) => (
                   <div
                     key={i}
-                    className={`menu-item-container ${isGameTab ? 'game-item-container' : ''}`}
-                    style={{ ...menuItemStyle, ...(isGameTab ? gameMenuItemStyle : {}) }}
+                    className={`menu-item-container ${
+                      isGameTab ? 'game-item-container' : ''
+                    }`}
+                    style={{
+                      ...menuItemStyle,
+                      ...(isGameTab ? gameMenuItemStyle : {}),
+                    }}
                   >
                     {item.image && (
                       <img
                         src={item.image}
                         alt={item.name}
                         className="menu-item-img"
-                        style={{ ...itemImageStyle, ...(isGameTab ? gameItemImageStyle : {}) }}
+                        style={{
+                          ...itemImageStyle,
+                          ...(isGameTab ? gameItemImageStyle : {}),
+                        }}
                         loading="lazy"
                         onError={(e) => {
                           (e.target as HTMLImageElement).style.display = 'none';
                         }}
                       />
                     )}
+
                     <div style={itemTextContainerStyle}>
                       <div style={itemMainRowStyle}>
-                        <span style={{ ...itemNameStyle, ...(isGameTab ? gameItemNameStyle : {}) }}>{item.name}</span>
+                        <span
+                          style={{
+                            ...itemNameStyle,
+                            ...(isGameTab ? gameItemNameStyle : {}),
+                          }}
+                        >
+                          {item.name}
+                        </span>
+
                         {item.price ? (
                           <>
-                            <div style={{ ...itemConnectorStyle, ...(isGameTab ? gameItemConnectorStyle : {}) }}></div>
+                            <div
+                              style={{
+                                ...itemConnectorStyle,
+                                ...(isGameTab
+                                  ? gameItemConnectorStyle
+                                  : {}),
+                              }}
+                            />
+
                             <span
                               style={{
                                 ...itemPriceStyle,
-                                color: isGameTab ? '#A02C3D' : itemPriceStyle.color,
+                                color: isGameTab
+                                  ? '#A02C3D'
+                                  : itemPriceStyle.color,
                               }}
                             >
-                                {item.price}
+                              {item.price}
                             </span>
                           </>
                         ) : null}
                       </div>
+
                       {item.description && (
                         <div style={itemSubRowStyle}>
                           <span
                             style={{
                               ...itemDescStyle,
-                              color: isGameTab ? '#D99DA8' : itemDescStyle.color,
+                              color: isGameTab
+                                ? '#D99DA8'
+                                : itemDescStyle.color,
                             }}
                           >
                             {item.description}
@@ -95,36 +138,46 @@ const Menu: React.FC = () => {
         .menu-item-container {
           transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .menu-item-img {
           transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
         }
+
         .menu-item-container:hover .menu-item-img {
           transform: scale(1.08);
           border-color: rgba(212, 175, 55, 0.7) !important;
           box-shadow: 0 6px 16px rgba(212, 175, 55, 0.25);
         }
+
         .game-item-container:hover .menu-item-img {
           border-color: rgba(160, 44, 61, 0.7) !important;
           box-shadow: 0 6px 16px rgba(160, 44, 61, 0.25);
         }
+
         @media (max-width: 576px) {
           .menu-item-container {
             gap: 12px !important;
           }
+
           .menu-item-img {
             width: 65px !important;
             height: 65px !important;
           }
         }
       `}</style>
+
       <div
         className="container"
-        style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 20px' }}
+        style={{
+          maxWidth: '1100px',
+          margin: '0 auto',
+          padding: '0 20px',
+        }}
       >
         <h2 style={titleStyle}>Меню</h2>
 
         <div style={tabsContainerStyle}>
-          {categories.map(cat => (
+          {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
@@ -138,7 +191,9 @@ const Menu: React.FC = () => {
                     : 'rgba(255, 255, 255, 0.5)',
                 borderBottom:
                   activeCategory === cat
-                    ? `1px solid ${cat === 'Ігри' ? '#A02C3D' : '#D4AF37'}`
+                    ? `1px solid ${
+                        cat === 'Ігри' ? '#A02C3D' : '#D4AF37'
+                      }`
                     : '1px solid transparent',
                 fontWeight: activeCategory === cat ? 600 : 400,
               }}
@@ -154,7 +209,6 @@ const Menu: React.FC = () => {
   );
 };
 
-// Styles
 const sectionStyle: React.CSSProperties = {
   padding: '120px 0',
   backgroundColor: '#050505',
@@ -191,7 +245,6 @@ const tabButtonStyle: React.CSSProperties = {
   outline: 'none',
 };
 
-// Text Menu Styles
 const menuGridStyle: React.CSSProperties = {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
